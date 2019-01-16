@@ -11,10 +11,10 @@ class Nav extends Component {
     render() {
         return (
             <nav>
-                <ul className="listBare">
-                    <li><a href="#">Who am I?</a></li>
-                    <li><a href="#">What matters to me?</a></li>
-                    <li><a href="#">What kind of work do I do?</a></li>
+                <ul className="listBare navList">
+                    <li className="padding-small"><a href="#">Who am I?</a></li>
+                    <li className="padding-small"><a href="#">What matters to me?</a></li>
+                    <li className="padding-small"><a href="#">What kind of work do I do?</a></li>
                 </ul>
             </nav>
         );
