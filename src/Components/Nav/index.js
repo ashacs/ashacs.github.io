@@ -12,9 +12,9 @@ class Nav extends Component {
         return (
             <nav>
                 <ul className="listBare navList">
-                    <li className="padding-small"><a href="#">Who am I?</a></li>
-                    <li className="padding-small"><a href="#">What matters to me?</a></li>
-                    <li className="padding-small"><a href="#">What kind of work do I do?</a></li>
+                    <li className="padding-small navLink"><a href="#">Who am I?</a></li>
+                    <li className="padding-small navLink"><a href="#">What do I do?</a></li>
+                    <li className="padding-small navLink"><a href="#">What matters to me?</a></li>
                 </ul>
             </nav>
         );
