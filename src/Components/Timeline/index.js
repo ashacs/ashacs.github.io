@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import './index.scss';
-import Timeline from '../Timeline';
 
-class About extends Component {
+class Timeline extends Component {
 
     constructor() {
         super();
@@ -11,10 +10,12 @@ class About extends Component {
 
     render() {
         return (
-            <Timeline />
+            <ul>
+                <li>First timeline marker</li>
+            </ul>
         );
     }
 
 };
 
-export default About;
+export default Timeline;
