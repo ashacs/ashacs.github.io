@@ -2,7 +2,7 @@
   "name": "ashacs.github.io",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ashacs.me",
+  "homepage": "https://www.ashacs.me",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "node-sass": "^4.11.0",
