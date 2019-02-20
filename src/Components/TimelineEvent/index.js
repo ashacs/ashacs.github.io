@@ -9,9 +9,14 @@ class TimelineEvent extends Component {
 
   render() {
     return (
-      <li>
-        <h2>{this.props.title}</h2>
-        <p>{this.props.body}</p>
+      <li className="timelineEvent">
+        <div>
+          <h2>{this.props.title}</h2>
+        </div>
+        <div className="timelineMarker" />
+        <div>
+          <p>{this.props.body}</p>
+        </div>
       </li>
     );
   }

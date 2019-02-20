@@ -1,0 +1,34 @@
+@import "../../tokens.scss";
+
+.timelineEvent {
+  position: relative;
+  padding-left: 40px;
+}
+
+.timelineMarker {
+  position: absolute;
+  left: 30px;
+  top: 10px;
+  left: 10px;
+  height: 100%;
+}
+
+.timelineMarker::before {
+  content: "";
+  border-radius: 100%;
+  border: 5px solid transparent;
+  background: $brand-color-blue;
+  position: absolute;
+  display: block;
+}
+
+.timelineMarker::after {
+  content: "";
+  width: 3px;
+  background: $brand-color-black;
+  position: absolute;
+  display: block;
+  height: 100%;
+  top: 15px;
+  left: 3px;
+}

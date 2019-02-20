@@ -10,12 +10,18 @@ class Timeline extends Component {
 
   render() {
     return (
-      <ul>
-        <TimelineEvent
-          title="My first event"
-          body="Information about my first event."
-        />
-      </ul>
+      <div className="timeline">
+        <ul className="timelineList">
+          <TimelineEvent
+            title="My first event"
+            body="Information about my first event."
+          />
+          <TimelineEvent
+            title="My second event"
+            body="Information about my second event."
+          />
+        </ul>
+      </div>
     );
   }
 }
