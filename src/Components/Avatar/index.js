@@ -1,19 +1,25 @@
-import React, { Component } from 'react';
-import './index.scss';
+import React, { Component } from "react";
+import "./index.scss";
 
 class Avatar extends Component {
+  constructor() {
+    super();
+    this.state = {};
+  }
 
-    constructor() {
-        super();
-        this.state = {};
-    }
-
-    render() {
-        return (
-            <img class="rounded" src="/resources/avatar.jpg" alt="profile avatar" height="200" width="200"/>
-        );
-    }
-
-};
+  render() {
+    return (
+      <a href="/">
+        <img
+          class="rounded"
+          src="/resources/avatar.jpg"
+          alt="profile avatar"
+          height="200"
+          width="200"
+        />
+      </a>
+    );
+  }
+}
 
 export default Avatar;
