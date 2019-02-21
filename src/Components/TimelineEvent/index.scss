@@ -18,14 +18,14 @@
   content: "";
   border-radius: 100%;
   border: 5px solid transparent;
-  background: $brand-color-blue;
+  background: $brand-color-pink;
   position: absolute;
   display: block;
 }
 
 .timelineMarker::after {
   content: "";
-  width: 3px;
+  width: 2.5px;
   background: $brand-color-black;
   position: absolute;
   display: block;

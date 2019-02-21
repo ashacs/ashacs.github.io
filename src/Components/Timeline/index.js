@@ -11,7 +11,7 @@ class Timeline extends Component {
   render() {
     return (
       <div className="timeline">
-        <ul className="timelineList">
+        <ul className="listBare timelineList">
           <TimelineEvent
             title="My first event"
             body="Information about my first event."

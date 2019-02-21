@@ -12,13 +12,13 @@ class Nav extends Component {
       <nav>
         <ul className="listBare navList">
           <li className="padding-small navLink">
-            <a href="/about">Who am I?</a>
+            <a href="/about">About me</a>
           </li>
           <li className="padding-small navLink">
-            <a href="/career">What do I do?</a>
+            <a href="/career">Career</a>
           </li>
           <li className="padding-small navLink">
-            <a href="/interests">What matters to me?</a>
+            <a href="/interests">Values</a>
           </li>
         </ul>
       </nav>
