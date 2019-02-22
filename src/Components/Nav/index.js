@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "./index.scss";
 
 class Nav extends Component {
@@ -12,13 +13,13 @@ class Nav extends Component {
       <nav>
         <ul className="listBare navList">
           <li className="padding-small navLink">
-            <a href="/about">About me</a>
+            <Link to="/about">About me</Link>
           </li>
           <li className="padding-small navLink">
-            <a href="/career">Career</a>
+            <Link to="/career">Career</Link>
           </li>
           <li className="padding-small navLink">
-            <a href="/interests">Values</a>
+            <Link to="/interests">Values</Link>
           </li>
         </ul>
       </nav>
