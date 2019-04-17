@@ -1,6 +1,16 @@
-@import '../../tokens.scss';
-
+@import "../../tokens.scss";
 
 .navLink {
-    font-family: $brand-font-link;
+  font-family: $brand-font-link;
+  border-top: 2px solid $brand-color-4;
+}
+
+.navLink:last-child {
+  border-bottom: 2px solid $brand-color-4;
+}
+
+.navLink:hover {
+  a {
+    color: black;
+  }
 }
