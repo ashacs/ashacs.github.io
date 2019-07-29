@@ -19,7 +19,7 @@ class Timeline extends Component {
           <TimelineEvent
             title="San Diego"
             body="UC San Diego class of 2016, with a Bachelors in Computer Science. While the sun was 
-              shining outside, I spent my time especially interested in the computational theory, discrete 
+              shining outside, I spent my time especially interested in computational theory, discrete 
               mathematics, and cryptography. "
           />
           <TimelineEvent
