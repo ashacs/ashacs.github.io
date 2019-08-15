@@ -7,7 +7,7 @@ class Panel extends Component {
   render() {
     return (
       <div className="panel">
-        <h1 className="panelTitle">Asha C.S.</h1>
+        <a href="/"><h1 className="panelTitle">Asha C.S.</h1></a>
         <Avatar />
         <Nav navItemsList={["about", "career", "interests"]} />
       </div>
