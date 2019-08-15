@@ -4,9 +4,16 @@
     position: relative;
     padding-left: 60px;
     padding-top: 20px;
+    width: 80%;
 }
 
 .timelineList {
     text-align: left;
-    width: 50%;
+    width: 100%;
+}
+
+@media #{$large-screen} {
+    .timelineList {
+        width: 70%;
+    }
 }
