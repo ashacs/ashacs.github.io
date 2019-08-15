@@ -9,15 +9,14 @@ class Avatar extends Component {
 
   render() {
     return (
-      <a href="/">
+      <div className="avatar">
         <img
-          class="rounded"
+          className="rounded"
           src="/resources/avatar.jpg"
           alt="profile avatar"
-          height="200"
-          width="200"
+          width="25%"
         />
-      </a>
+      </div>
     );
   }
 }
