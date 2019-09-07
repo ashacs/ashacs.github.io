@@ -1,8 +1,13 @@
 import React, { Component } from "react";
+import "./index.scss";
 
 class Home extends Component {
   render() {
-    return <h1>hi</h1>;
+    return (
+      <div className="page-content">
+        <h1>hi</h1>
+      </div>
+    );
   }
 }
 

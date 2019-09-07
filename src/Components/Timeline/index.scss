@@ -1,20 +1,17 @@
-@import '../../tokens.scss';
+@import "../../tokens.scss";
 
 .timeline {
-    position: relative;
-    padding-left: 60px;
-    padding-top: 20px;
-    width: 80%;
-    overflow: scroll;
+  position: relative;
+  padding-top: 20px;
 }
 
 .timelineList {
-    text-align: left;
-    width: 100%;
+  text-align: left;
+  width: 100%;
 }
 
 @media #{$large-screen} {
-    .timelineList {
-        width: 70%;
-    }
+  .timelineList {
+    width: 70%;
+  }
 }
