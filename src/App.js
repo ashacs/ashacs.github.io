@@ -5,6 +5,7 @@ import Panel from "./Components/Panel";
 import About from "./Components/About";
 import Career from "./Components/Career";
 import Interests from "./Components/Interests";
+import Home from "./Components/Home";
 
 class App extends Component {
   constructor(props) {
@@ -17,6 +18,7 @@ class App extends Component {
       <Router basename={process.env.PUBLIC_URL}>
         <div className="App">
           <Panel />
+          <Route path="/" exact={true} component={Home} />
           <Route path="/about" component={About} />
           <Route path="/career" component={Career} />
           <Route path="/interests" component={Interests} />
