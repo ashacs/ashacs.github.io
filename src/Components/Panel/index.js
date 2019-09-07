@@ -7,8 +7,10 @@ class Panel extends Component {
   render() {
     return (
       <div className="panel">
-        <a href="/"><h1 className="panelTitle">Asha C.S.</h1></a>
-        <Avatar />
+        <a href="/">
+          <h1 className="panelTitle">Asha Camper Singh</h1>
+        </a>
+        <Avatar imagePath="/resources/avatar.jpg" />
         <Nav navItemsList={["about", "career", "interests"]} />
       </div>
     );

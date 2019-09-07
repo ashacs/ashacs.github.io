@@ -12,7 +12,7 @@ class Avatar extends Component {
       <div className="avatar">
         <img
           className="rounded"
-          src="/resources/avatar.jpg"
+          src={this.props.imagePath}
           alt="profile avatar"
           width="25%"
         />
