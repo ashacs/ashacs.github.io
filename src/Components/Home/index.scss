@@ -1,0 +1,25 @@
+@import "../../tokens.scss";
+
+.home {
+  display: flex;
+  align-items: space-around;
+}
+
+.home-blurb {
+  font-size: 54px;
+  text-align: left;
+  font-family: $brand-font-link;
+}
+
+.home-blurb-emphasis {
+  font-family: $brand-font-title;
+  font-weight: bold;
+  color: $brand-color-4;
+}
+
+@media #{$large-screen} {
+  .home-blurb {
+    padding-left: 50px;
+    padding-top: 150px;
+  }
+}
