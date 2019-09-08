@@ -1,0 +1,16 @@
+@import "../../tokens.scss";
+
+.career-item {
+}
+
+.career-item-title {
+  display: flex;
+  font-size: 30px;
+  & img {
+    margin-right: 20px;
+  }
+}
+
+.career-item-description {
+  font-size: 22px;
+}

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./index.scss";
+import CareerItem from "../CareerItem";
 
 class Career extends Component {
   constructor() {
@@ -8,7 +9,20 @@ class Career extends Component {
   }
 
   render() {
-    return <p>Career</p>;
+    return (
+      <div className="page-content career">
+        <CareerItem
+          imagePath="/resources/th-logo.png"
+          title="Trailhead"
+          description="Full stack software engineering role for Salesforce's learning platform."
+        />
+        <CareerItem
+          imagePath="/resources/em-logo.png"
+          title="Event Monitoring"
+          description="Full stack software engineering role for a Salesforce security add-on."
+        />
+      </div>
+    );
   }
 }
 
