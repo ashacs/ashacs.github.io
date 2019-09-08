@@ -40,7 +40,13 @@
 .page-content {
   width: 80%;
   overflow: scroll;
-  padding-left: 60px;
+  padding-left: 20px;
+}
+
+@media #{$large-screen} {
+  .page-content {
+    padding-left: 60px;
+  }
 }
 
 @keyframes App-logo-spin {
