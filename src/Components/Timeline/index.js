@@ -11,6 +11,7 @@ class Timeline extends Component {
   render() {
     return (
       <div className="timeline">
+        <h1>🗺️ My Journey</h1>
         <ul className="listBare timelineList">
           <TimelineEvent
             title="Sacramento"
