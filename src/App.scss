@@ -43,6 +43,12 @@
   padding-left: 20px;
 }
 
+@media #{$medium-screen} {
+  .page-content {
+    padding-left: 40px;
+  }
+}
+
 @media #{$large-screen} {
   .page-content {
     padding-left: 60px;
