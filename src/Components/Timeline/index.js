@@ -11,7 +11,12 @@ class Timeline extends Component {
   render() {
     return (
       <div className="timeline">
-        <h1>🗺️ My Journey</h1>
+        <h1>
+          <span role="img" aria-label="Map emoji">
+            🗺️
+          </span>{" "}
+          My Journey
+        </h1>
         <ul className="listBare timelineList">
           <TimelineEvent
             title="Sacramento"
