@@ -8,7 +8,11 @@ class Panel extends Component {
     return (
       <div className="panel">
         <a href="/">
-          <h1 className="panelTitle">Asha Camper Singh</h1>
+          <h1 className="panelTitle">
+            Asha <br />
+            Camper <br />
+            Singh
+          </h1>
         </a>
         <Avatar imagePath="/resources/avatar.jpg" />
         <Nav navItemsList={["about", "career", "interests"]} />

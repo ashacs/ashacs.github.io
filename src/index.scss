@@ -1,6 +1,8 @@
-@import 'tokens.scss';
+@import "tokens.scss";
 
-html, body, #root {
+html,
+body,
+#root {
   height: 100%;
 }
 
@@ -12,11 +14,11 @@ html, body, #root {
 
 a {
   text-decoration: none;
-  font-size: 22px;
   color: $brand-color-7;
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
   text-decoration: none;
 }
 

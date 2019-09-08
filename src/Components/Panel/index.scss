@@ -10,12 +10,22 @@
   justify-content: space-evenly;
 }
 
+.panelTitle {
+  font-family: $brand-font-title;
+  font-weight: 600;
+  font-size: 32px;
+}
+
 @media #{$medium-screen} {
   .panel {
     height: 130px;
   }
   .panel .avatar {
     display: flex;
+  }
+
+  .panelTitle {
+    font-size: 32px;
   }
 }
 
@@ -31,9 +41,8 @@
       max-width: 150px;
     }
   }
-}
 
-.panelTitle {
-  font-family: $brand-font-title;
-  font-weight: 600;
+  .panelTitle {
+    font-size: 50px;
+  }
 }

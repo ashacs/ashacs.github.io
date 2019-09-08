@@ -1,6 +1,18 @@
-@import '../../tokens.scss';
+@import "../../tokens.scss";
 
 .navList {
+  font-size: 18px;
+  text-align: center;
+}
+
+@media #{$medium-screen} {
+  .navList {
     font-size: 18px;
-    text-align: center;
+  }
+}
+
+@media #{$large-screen} {
+  .navList {
+    font-size: 22px;
+  }
 }
