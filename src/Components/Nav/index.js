@@ -14,7 +14,7 @@ class Nav extends Component {
    */
   renderNavItems() {
     const { navItemsList } = this.props;
-    return navItemsList.map(n => <NavItem title={n} />);
+    return navItemsList.map(n => <NavItem key={n} title={n} />);
   }
 
   render() {
