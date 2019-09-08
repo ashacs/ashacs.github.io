@@ -6,7 +6,7 @@
 }
 
 .home-blurb {
-  font-size: 54px;
+  font-size: 34px;
   text-align: left;
   font-family: $brand-font-link;
 }
@@ -17,9 +17,16 @@
   color: $brand-color-4;
 }
 
+@media #{$medium-screen} {
+  .home-blurb {
+    font-size: 54px;
+  }
+}
+
 @media #{$large-screen} {
   .home-blurb {
     padding-left: 50px;
     padding-top: 150px;
+    font-size: 54px;
   }
 }
