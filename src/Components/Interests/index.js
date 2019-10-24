@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./index.scss";
+import Card from "../Card";
 
 class Interests extends Component {
   constructor() {
@@ -8,7 +9,24 @@ class Interests extends Component {
   }
 
   render() {
-    return <p>Interests</p>;
+    return (
+      <div className="interests">
+        <Card
+          title="Listening"
+          items={[
+            {
+              title: "Reply All",
+              link: "https://gimletmedia.com/shows/reply-all"
+            }
+          ]}
+        />
+        <Card
+          title="Watching"
+          items={[{ title: "The West Wing" }, { title: "Brooklyn 99" }]}
+        />
+        <Card title="Reading" items={[{ title: "Lord of the Flies" }]} />
+      </div>
+    );
   }
 }
 

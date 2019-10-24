@@ -1,0 +1,12 @@
+@import "../../tokens.scss";
+
+.card {
+  background-color: $brand-color-1;
+  outline: 2px dashed black;
+  max-width: 80%;
+  width: 70%;
+}
+
+.card-title {
+  padding-left: 15px;
+}
