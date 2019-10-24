@@ -4,7 +4,7 @@ import "./index.scss";
 class CareerItem extends Component {
   render() {
     return (
-      <div className="career-item">
+      <div>
         <div className="career-item-title">
           <img src={this.props.imagePath} alt="" width="100px" height="100px" />
           <h2>{this.props.title}</h2>
