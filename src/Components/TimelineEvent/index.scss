@@ -22,7 +22,7 @@
   content: "";
   border-radius: 100%;
   border: 5px solid transparent;
-  background: $brand-color-3;
+  background: $brand-color_blue-dark;
   position: absolute;
   display: block;
 }
@@ -30,7 +30,7 @@
 .timelineMarker::after {
   content: "";
   width: 2.5px;
-  background: $brand-color-7;
+  background: $brand-color_black;
   position: absolute;
   display: block;
   height: 100%;
