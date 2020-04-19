@@ -18,13 +18,14 @@
 }
 
 .page-content {
-  width: 80%;
+  height: 80%;
   overflow: scroll;
-  padding-left: 2rem;
+  padding: 2rem 2rem;
 }
 
 @media #{$large-screen} {
   .page-content {
+    width: 80%;
     padding: 3rem 3rem;
   }
 }

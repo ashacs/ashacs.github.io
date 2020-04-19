@@ -10,7 +10,7 @@ class Interests extends Component {
 
   render() {
     return (
-      <div className="interests">
+      <div className="page-content interests">
         <Card
           title="Listening"
           items={[
