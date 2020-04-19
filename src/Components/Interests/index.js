@@ -15,16 +15,24 @@ class Interests extends Component {
           title="Listening"
           items={[
             {
-              title: "Reply All",
+              title: "Reply All (podcast)",
               link: "https://gimletmedia.com/shows/reply-all"
+            },
+            {
+              title: 'Tennis (band)',
+              link: "https://open.spotify.com/artist/1ybAN3utgdoUL1MUCtH4QM"
+            },
+            {
+              title: 'Pappooz (band)',
+              link: 'https://open.spotify.com/artist/2gaCpvhi31OZtozJKsr5gm'
             }
           ]}
         />
         <Card
           title="Watching"
-          items={[{ title: "The West Wing" }, { title: "Brooklyn 99" }]}
+          items={[{ title: "The West Wing" }, { title: "Brooklyn 99" }, { title: "Top Chef" }]}
         />
-        <Card title="Reading" items={[{ title: "Lord of the Flies" }]} />
+        <Card title="Reading" items={[{ title: "The Agony and the Ecstasy" }]} />
       </div>
     );
   }
