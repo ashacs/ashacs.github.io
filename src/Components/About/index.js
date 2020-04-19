@@ -16,7 +16,7 @@ class About extends Component {
     },
     {
       title: "San Diego",
-      body: "I graduaced from UC San Diego with a Bachelors in Computer Science. While the sun was shining outside, I spent my time especially interested in computational theory, discrete mathematics, and cryptography. "
+      body: "I graduated from UC San Diego with a Bachelors in Computer Science. While the sun was shining outside, I spent my time especially interested in computational theory, discrete mathematics, and cryptography. "
     },
     {
       title: "San Francisco",
