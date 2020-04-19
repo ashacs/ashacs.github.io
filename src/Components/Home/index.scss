@@ -6,7 +6,7 @@
 }
 
 .home-blurb {
-  font-size: 34px;
+  font-size: 2rem;
   text-align: left;
 }
 
@@ -18,14 +18,14 @@
 
 @media #{$medium-screen} {
   .home-blurb {
-    font-size: 54px;
+    font-size: 4rem;
   }
 }
 
 @media #{$large-screen} {
   .home-blurb {
-    padding-left: 50px;
-    padding-top: 150px;
-    font-size: 54px;
+    padding-left: 2rem;
+    padding-top: 4rem;
+    font-size: 4rem;
   }
 }

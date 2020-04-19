@@ -4,27 +4,27 @@
   content: "";
   display: block;
   border-top: 2px solid $brand-color_black;
-  width: 110px;
-  padding-bottom: 5px;
+  width: 8rem;
+  padding-bottom: .5rem;
 }
 
 .navLink:last-child:after {
   content: "";
   display: block;
   border-bottom: 2px solid $brand-color_black;
-  width: 110px;
-  padding-top: 5px;
+  width: 8rem;
+  padding-top: .5rem;
 }
 
 .navLink:hover {
   a::before {
     display: inline-block;
     content: "•";
-    margin-right: 2px;
+    margin-right: .1rem;
   }
   a::after {
     display: inline-block;
     content: "•";
-    margin-left: 2px;
+    margin-left: .1rem;
   }
 }
