@@ -23,14 +23,14 @@ class Interests extends Component {
               link: "https://open.spotify.com/artist/1ybAN3utgdoUL1MUCtH4QM"
             },
             {
-              title: 'Pappooz (band)',
+              title: 'Papooz (band)',
               link: 'https://open.spotify.com/artist/2gaCpvhi31OZtozJKsr5gm'
             }
           ]}
         />
         <Card
           title="Watching"
-          items={[{ title: "The West Wing" }, { title: "Brooklyn 99" }, { title: "Top Chef" }]}
+          items={[{ title: "The West Wing" }, { title: "Brooklyn Nine-Nine" }, { title: "Top Chef" }]}
         />
         <Card title="Reading" items={[{ title: "The Agony and the Ecstasy" }]} />
       </div>
