@@ -5,6 +5,10 @@
   outline: .2rem dashed black;
   max-width: 80%;
   width: 70%;
+
+  a:hover {
+    color: $brand-color_pink_dark;
+  }
 }
 
 .card-title {
