@@ -30,7 +30,7 @@ class Interests extends Component {
         />
         <Card
           title="Watching"
-          items={[{ title: "The West Wing" }, { title: "Brooklyn Nine-Nine" }, { title: "Top Chef" }]}
+          items={[{ title: "The West Wing" }, { title: "Seinfeld" }, { title: "Buffy the Vampire Slayer" }]}
         />
         <Card title="Reading" items={[{ title: "The Agony and the Ecstasy" }]} />
       </div>
