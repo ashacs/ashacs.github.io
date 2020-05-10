@@ -32,7 +32,7 @@ class Interests extends Component {
           title="Watching"
           items={[{ title: "The West Wing" }, { title: "Seinfeld" }, { title: "Buffy the Vampire Slayer" }]}
         />
-        <Card title="Reading" items={[{ title: "The Agony and the Ecstasy" }]} />
+        <Card title="Reading" items={[{ title: "Song of Solomon" }]} />
       </div>
     );
   }
