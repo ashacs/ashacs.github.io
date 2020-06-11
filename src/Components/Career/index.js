@@ -11,7 +11,7 @@ class Career extends Component {
   events = [
     {
       title: "Transaction Security",
-      body: "On my first team at the company, I worked on a security feature that intercepts Salesforce events and applies security policies to them. Our code lived in some pretty important parts of the application, so I learned a lot about quality!"
+      body: "On my first team at the company, I worked on a security feature that intercepts Salesforce events and applies security policies to them. Our code lived in some pretty important parts of the application, so I learned a lot about quality."
     },
     {
       title: "Event Monitoring",
