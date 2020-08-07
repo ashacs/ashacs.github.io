@@ -17,6 +17,10 @@ class Interests extends Component {
           link: "https://gimletmedia.com/shows/reply-all"
         },
         {
+          title: "Slow Burn (podcast)",
+          link: "https://slate.com/podcasts/slow-burn/s4/david-duke"
+        },
+        {
           title: 'Tennis (band)',
           link: "https://open.spotify.com/artist/1ybAN3utgdoUL1MUCtH4QM"
         },
@@ -28,11 +32,14 @@ class Interests extends Component {
     },
     {
       title: "Watching",
-      items: [{ title: "The West Wing" }, { title: "Seinfeld" }, { title: "Buffy the Vampire Slayer" }]
+      items: [{ title: "The West Wing" }, { title: "Buffy the Vampire Slayer" }]
     },
     {
       title: "Reading",
-      items: [{ title: "Stony the Road: Reconstruction, White Supremacy, and the Rise of Jim Crow" }]
+      items: [{ 
+        title: "Homegoing by Yaa Gyasi", 
+        link: "https://www.goodreads.com/book/show/27071490-homegoing" 
+      }]
     }
   ];
 
