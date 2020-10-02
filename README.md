@@ -58,3 +58,10 @@ npm run deploy
 
 - [Create React App](https://github.com/facebook/create-react-app) - Used to generate project structure
 - [Sass](https://sass-lang.com) - Used for styling
+
+## TODO
+
+- [ ] Add email and LinkedIn contact info
+- [ ] Goodreads integration
+- [ ] Persistent dot indicators in sidebar
+- [ ] Page content component
