@@ -31,7 +31,7 @@ class Career extends Component {
     return (
       <div className="heading">
         <Icon src="/resources/sfdc-cloud.svg" alt="" />
-        <h1 class="career-title">Salesforce</h1>
+        <h1 className="career-title">Salesforce</h1>
       </div>
     );
   }
