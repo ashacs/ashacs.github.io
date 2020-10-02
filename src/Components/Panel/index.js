@@ -9,8 +9,8 @@ class Panel extends Component {
       <div className="panel">
         <a href="/">
           <h1 className="panelTitle">
-            Asha <br />
-            Camper <br />
+            Asha<br />
+            Camper<br />
             Singh
           </h1>
         </a>
