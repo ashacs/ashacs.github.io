@@ -7,16 +7,27 @@
   box-shadow: 8px 8px 5px grey;
   max-width: 80%;
   width: 70%;
+  line-height: 1.5rem;
 
-  a:hover {
-    color: $brand-color_pink_dark;
+  &:not(:last-child) {
+    margin-bottom: 2rem;
   }
-}
-
-.card:not(:last-child) {
-  margin-bottom: 2rem;
 }
 
 .card-title {
   padding-left: 1rem;
+}
+
+.card-item-link {
+  border-bottom: 3px solid $brand-color_pink_dark;
+  border-right: 2px solid transparent;
+  border-left: 2px solid transparent;
+
+  &:hover {
+    font-style: oblique;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 2rem;
+  }
 }
