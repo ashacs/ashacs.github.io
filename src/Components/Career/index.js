@@ -26,7 +26,7 @@ class Career extends Component {
   renderHeader() {
     return (
       <div className="heading">
-          <img src="/resources/sfdc-cloud.png" alt="" className="heading-icon" />
+          <img src="/resources/sfdc-cloud.svg" alt="" className="heading-icon" />
         <h1>
           {" "}
         Salesforce
