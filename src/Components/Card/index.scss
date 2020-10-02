@@ -2,13 +2,19 @@
 
 .card {
   background-color: $brand-color_blue-light;
-  outline: .2rem dashed black;
+  border-radius: 0.5rem;
+  border: solid black;
+  box-shadow: 8px 8px 5px grey;
   max-width: 80%;
   width: 70%;
 
   a:hover {
     color: $brand-color_pink_dark;
   }
+}
+
+.card:not(:last-child) {
+  margin-bottom: 2rem;
 }
 
 .card-title {
