@@ -15,7 +15,7 @@ class TimelineEvent extends Component {
         </div>
         <div className="timelineMarker" />
         <div>
-          <p>{this.props.body}</p>
+          {this.props.body}
         </div>
       </li>
     );
