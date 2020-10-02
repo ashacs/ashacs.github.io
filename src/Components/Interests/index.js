@@ -17,8 +17,8 @@ class Interests extends Component {
           link: "https://gimletmedia.com/shows/reply-all"
         },
         {
-          title: "Slow Burn (podcast)",
-          link: "https://slate.com/podcasts/slow-burn/s4/david-duke"
+          title: "Serial - Season 3 (podcast)",
+          link: "https://serialpodcast.org/season-three/about"
         },
         {
           title: 'Tennis (band)',
@@ -37,8 +37,8 @@ class Interests extends Component {
     {
       title: "Reading",
       items: [{ 
-        title: "Homegoing by Yaa Gyasi", 
-        link: "https://www.goodreads.com/book/show/27071490-homegoing" 
+        title: "Sapiens by Yuval Noah Harari", 
+        link: "https://www.goodreads.com/book/show/23692271-sapiens" 
       }]
     }
   ];
