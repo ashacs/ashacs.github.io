@@ -7,7 +7,9 @@ class Home extends Component {
       <div className="page-content home">
         <p className="home-blurb">
           Hi, my name is <span className="home-blurb-emphasis">Asha</span>! I'm
-          a software engineer by day and a puzzle-doer (puzzler?) by night.
+          a lover of puzzles. Sometimes it's your traditional jigsaw, and
+          sometimes it's using every last inch of storage space in a San Francisco
+          apartment.
         </p>
       </div>
     );
