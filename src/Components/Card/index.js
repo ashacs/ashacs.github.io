@@ -23,7 +23,7 @@ class Card extends Component {
 function renderItem(item) {
   if (item.title && item.link) {
     return (
-      <a href={item.link} class="card-item-link" target="_blank" rel="noopener noreferrer">
+      <a href={item.link} className="card-item-link" target="_blank" rel="noopener noreferrer">
         {item.title}
       </a>
     );

@@ -48,6 +48,7 @@ class Interests extends Component {
       <div className="page-content interests">
         {this.interests.map((interest) => (
             <Card
+              key={interest.title}
               title={interest.title}
               items={interest.items}
             />
