@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./index.scss";
 import Nav from "../Nav";
 import Avatar from "../Avatar";
+import Footer from "../Footer";
 
 class Panel extends Component {
   render() {
@@ -9,13 +10,18 @@ class Panel extends Component {
       <div className="panel">
         <a href="/">
           <h1 className="panelTitle">
-            Asha<br />
-            Camper<br />
+            Asha
+            <br />
+            Camper
+            <br />
             Singh
           </h1>
         </a>
         <Avatar imagePath="/resources/avatar.jpg" />
         <Nav navItemsList={["about", "career", "interests"]} />
+        <div className="panel-footer">
+          <Footer />
+        </div>
       </div>
     );
   }

@@ -11,7 +11,7 @@ class Icon extends Component {
   render() {
     if (this.props.url) {
       return (
-        <a href="url" target="_blank" rel="noopener noreferrer">
+        <a href={this.props.url} target="_blank" rel="noopener noreferrer">
           <img src={this.props.src} className="icon-img" alt={this.props.alt} />
         </a>
       );
