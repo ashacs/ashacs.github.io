@@ -13,43 +13,97 @@ class Interests extends Component {
       title: "Listening",
       items: [
         {
-          title: "Coffee Break Italian (podcast)",
-          link: "https://coffeebreaklanguages.com/coffeebreakitalian/",
+          id: "italian",
+          content: (
+            <span>
+              {this.linkify(
+                "Coffee Break Italian",
+                "https://coffeebreaklanguages.com/coffeebreakitalian/"
+              )}{" "}
+              (podcast)
+            </span>
+          ),
         },
         {
-          title: "Serial - Season 3 (podcast)",
-          link: "https://serialpodcast.org/season-three/about",
+          id: "serial",
+          content: (
+            <span>
+              {this.linkify(
+                "Serial - Season 3",
+                "https://serialpodcast.org/season-three/about"
+              )}{" "}
+              (podcast)
+            </span>
+          ),
         },
         {
-          title: "Anderson .Paak",
-          link: "https://open.spotify.com/artist/3jK9MiCrA42lLAdMGUZpwa",
+          id: "anderson",
+          content: (
+            <span>
+              {this.linkify(
+                "Anderson .Paak",
+                "https://open.spotify.com/artist/3jK9MiCrA42lLAdMGUZpwa"
+              )}
+            </span>
+          ),
         },
         {
-          title: "Vulfpeck",
-          link: "https://open.spotify.com/artist/7pXu47GoqSYRajmBCjxdD6",
-        },
-        {
-          title: "St. Vincent",
-          link: "https://open.spotify.com/artist/7bcbShaqKdcyjnmv4Ix8j6",
+          id: "vulfpeck",
+          content: (
+            <span>
+              {this.linkify(
+                "Vulfpeck",
+                "https://open.spotify.com/artist/7pXu47GoqSYRajmBCjxdD6"
+              )}
+            </span>
+          ),
         },
       ],
     },
     {
       title: "Watching",
-      items: [{ title: "The Handmaid's Tale" }, { title: "Mr. Robot" }],
+      items: [
+        {
+          id: "handmaids-tale",
+          content: "The Handmaid's Tale",
+        },
+        {
+          id: "mr-robot",
+          content: "Mr. Robot",
+        },
+      ],
     },
     {
       title: "Reading",
       items: [
         {
-          title:
-            "The Righteous Mind: Why Good People Are Divided by Politics and Religion by Jonathan Haidt",
-          link:
-            "https://www.goodreads.com/book/show/11324722-the-righteous-mind",
+          id: "righteous-mind",
+          content: (
+            <span>
+              {this.linkify(
+                "The Righteous Mind: Why Good People Are Divided by Politics and Religion",
+                "https://www.goodreads.com/book/show/11324722-the-righteous-mind"
+              )}{" "}
+              by Jonathan Haidt
+            </span>
+          ),
         },
       ],
     },
   ];
+
+  linkify(content, href) {
+    return (
+      <a
+        href={href}
+        className="link-underline card-item-link"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {content}
+      </a>
+    );
+  }
 
   render() {
     return (

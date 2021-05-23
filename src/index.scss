@@ -28,7 +28,7 @@ a:focus {
   border-left: 2px solid transparent;
 
   &:hover {
-    font-style: oblique;
+    border-bottom-color: $brand-color_black;
   }
 }
 
