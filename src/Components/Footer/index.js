@@ -18,13 +18,13 @@ class Footer extends Component {
 
   renderIcons() {
     return (
-      <div>
+      <ul className="footer-icon-list">
         {this.icons.map((icon) => (
-          <span className="footer-icon">
+          <li key={icon.alt} className="footer-icon">
             <Icon src={icon.src} url={icon.url} alt={icon.alt} />
-          </span>
+          </li>
         ))}
-      </div>
+      </ul>
     );
   }
 
