@@ -6,6 +6,7 @@ import About from "./Components/About";
 import Career from "./Components/Career";
 import Interests from "./Components/Interests";
 import Home from "./Components/Home";
+import Footer from "./Components/Footer";
 
 class App extends Component {
   constructor(props) {
@@ -22,6 +23,9 @@ class App extends Component {
           <Route path="/about" component={About} />
           <Route path="/career" component={Career} />
           <Route path="/interests" component={Interests} />
+          <span className="app-footer">
+            <Footer />
+          </span>
         </div>
       </Router>
     );
