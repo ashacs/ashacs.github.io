@@ -61,8 +61,8 @@ npm run deploy
 
 ## TODO
 
-- [ ] Add email and LinkedIn contact info (Footer component?)
 - [ ] Goodreads integration
 - [ ] Persistent dot indicators in sidebar
 - [ ] Page content component
 - [ ] Use BEM
+- [ ] Handling routing for subpages
