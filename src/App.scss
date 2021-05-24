@@ -2,19 +2,8 @@
 
 .App {
   height: 100%;
-  display: flex;
-  flex-direction: column;
+  display: grid;
   font-family: $brand-font;
-}
-
-@media #{$large-screen} {
-  .App {
-    flex-direction: row;
-  }
-}
-
-.padding-small {
-  padding: 0.25rem;
 }
 
 .page-content {
@@ -22,8 +11,19 @@
 }
 
 @media #{$large-screen} {
+  .App {
+    grid-template-columns: 25% 75%;
+  }
+
   .page-content {
-    width: 80%;
+    max-width: 50%;
     padding: 3rem 5rem;
+  }
+}
+
+@media #{$medium-screen} {
+  .page-content {
+    max-width: 75%;
+    padding: 3rem 3rem;
   }
 }

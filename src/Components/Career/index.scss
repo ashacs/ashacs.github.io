@@ -1,8 +1,12 @@
 .heading {
-  display: flex;
+  display: grid;
+  grid-auto-flow: column;
   align-items: center;
+  justify-content: flex-start;
 }
 
-.career-title {
-  padding-left: 1rem;
+.heading-icon {
+  padding-right: 1rem;
+  display: grid;
+  align-items: center;
 }

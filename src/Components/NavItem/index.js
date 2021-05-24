@@ -10,7 +10,7 @@ class NavItem extends Component {
 
   render() {
     return (
-      <li className="padding-small navLink">
+      <li className="nav-link">
         <Link to={`/${this.props.title}`}>{this.props.title}</Link>
       </li>
     );

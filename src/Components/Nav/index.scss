@@ -3,6 +3,8 @@
 .navList {
   font-size: 1rem;
   text-align: center;
+  display: grid;
+  justify-items: center;
 }
 
 @media #{$large-screen} {

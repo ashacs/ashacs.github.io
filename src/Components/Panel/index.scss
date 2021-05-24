@@ -3,10 +3,8 @@
 .panel {
   background-color: $brand-color_blue-medium;
   align-items: center;
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: 20%;
+  display: grid;
+  grid-auto-flow: column;
   min-height: 9rem;
   justify-content: space-evenly;
 }
@@ -24,7 +22,7 @@
 
 @media #{$medium-screen} {
   .panel .avatar {
-    display: flex;
+    display: grid;
     img {
       max-width: 7rem;
     }
@@ -37,12 +35,10 @@
 
 @media #{$large-screen} {
   .panel {
-    width: 25%;
-    height: 100%;
-    flex-direction: column;
+    grid-auto-flow: row;
   }
   .panel .avatar {
-    display: flex;
+    display: grid;
     img {
       max-width: 9rem;
     }

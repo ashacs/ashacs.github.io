@@ -6,11 +6,4 @@
 
 .timelineList {
   text-align: left;
-  width: 100%;
-}
-
-@media #{$large-screen} {
-  .timelineList {
-    width: 70%;
-  }
 }

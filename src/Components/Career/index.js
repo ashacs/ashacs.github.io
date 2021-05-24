@@ -29,10 +29,12 @@ class Career extends Component {
 
   renderHeader() {
     return (
-      <div className="heading">
-        <Icon src="/resources/sfdc-cloud.svg" alt="" />
-        <h1 className="career-title">Salesforce</h1>
-      </div>
+      <h1 className="heading">
+        <span className="heading-icon">
+          <Icon src="/resources/sfdc-cloud.svg" alt="" />
+        </span>
+        Salesforce
+      </h1>
     );
   }
 

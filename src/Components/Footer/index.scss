@@ -1,11 +1,12 @@
 .footer {
-  display: flex;
+  display: grid;
   justify-content: center;
 }
 
 .footer-icon-list {
   list-style: none;
-  display: inline-flex;
+  display: grid;
+  grid-auto-flow: column;
   padding: 0;
 }
 

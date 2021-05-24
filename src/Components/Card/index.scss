@@ -5,8 +5,8 @@
   border-radius: 0.5rem;
   border: solid black;
   box-shadow: 8px 8px 5px grey;
-  max-width: 80%;
-  width: 70%;
+  width: 100%;
+  padding-right: 1rem;
   line-height: 1.5rem;
 
   &:not(:last-child) {

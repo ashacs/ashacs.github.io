@@ -1,10 +1,9 @@
 @import "../../tokens.scss";
 
 .interests {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 80%;
+  display: grid;
+  grid-auto-rows: min-content;
+  justify-items: center;
 }
 
 @media #{$large-screen} {
