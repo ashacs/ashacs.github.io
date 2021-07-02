@@ -77,6 +77,18 @@ class Interests extends Component {
       title: "Reading",
       items: [
         {
+          id: "dune",
+          content: (
+            <span>
+              {this.linkify(
+                "Dune",
+                "https://www.goodreads.com/book/show/44767458-dune"
+              )}{" "}
+              by Frank Herbert
+            </span>
+          ),
+        },
+        {
           id: "righteous-mind",
           content: (
             <span>
