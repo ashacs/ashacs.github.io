@@ -64,12 +64,8 @@ class Interests extends Component {
       title: "Watching",
       items: [
         {
-          id: "handmaids-tale",
-          content: "The Handmaid's Tale",
-        },
-        {
-          id: "mr-robot",
-          content: "Mr. Robot",
+          id: "ted-lasso",
+          content: "Ted Lasso",
         },
       ],
     },
@@ -77,14 +73,14 @@ class Interests extends Component {
       title: "Reading",
       items: [
         {
-          id: "dune",
+          id: "pachinko",
           content: (
             <span>
               {this.linkify(
-                "Dune",
-                "https://www.goodreads.com/book/show/44767458-dune"
+                "Pachinko",
+                "https://www.goodreads.com/book/show/34051011-pachinko"
               )}{" "}
-              by Frank Herbert
+              by Min Jin Lee
             </span>
           ),
         },
