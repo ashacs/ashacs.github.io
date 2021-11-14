@@ -37,12 +37,12 @@ class Interests extends Component {
           ),
         },
         {
-          id: "anderson",
+          id: "silksonic",
           content: (
             <span>
               {this.linkify(
-                "Anderson .Paak",
-                "https://open.spotify.com/artist/3jK9MiCrA42lLAdMGUZpwa"
+                "Silk Sonic",
+                "https://open.spotify.com/artist/6PvvGcCY2XtUcSRld1Wilr"
               )}
             </span>
           ),
@@ -73,14 +73,14 @@ class Interests extends Component {
       title: "Reading",
       items: [
         {
-          id: "pachinko",
+          id: "achilles",
           content: (
             <span>
               {this.linkify(
-                "Pachinko",
-                "https://www.goodreads.com/book/show/34051011-pachinko"
+                "The Song of Achilles",
+                "https://www.goodreads.com/book/show/13623848-the-song-of-achilles"
               )}{" "}
-              by Min Jin Lee
+              by Madeline Miller
             </span>
           ),
         },
