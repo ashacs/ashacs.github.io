@@ -25,18 +25,6 @@ class Interests extends Component {
           ),
         },
         {
-          id: "serial",
-          content: (
-            <span>
-              {this.linkify(
-                "Serial - Season 3",
-                "https://serialpodcast.org/season-three/about"
-              )}{" "}
-              (podcast)
-            </span>
-          ),
-        },
-        {
           id: "silksonic",
           content: (
             <span>
@@ -64,8 +52,12 @@ class Interests extends Component {
       title: "Watching",
       items: [
         {
-          id: "ted-lasso",
-          content: "Ted Lasso",
+          id: "succession",
+          content: "Succession",
+        },
+        {
+          id: "insecure",
+          content: "Insecure",
         },
       ],
     },
@@ -73,26 +65,14 @@ class Interests extends Component {
       title: "Reading",
       items: [
         {
-          id: "achilles",
+          id: "between",
           content: (
             <span>
               {this.linkify(
-                "The Song of Achilles",
-                "https://www.goodreads.com/book/show/13623848-the-song-of-achilles"
+                "Between the World and Me",
+                "https://www.goodreads.com/book/show/25489625-between-the-world-and-me"
               )}{" "}
-              by Madeline Miller
-            </span>
-          ),
-        },
-        {
-          id: "righteous-mind",
-          content: (
-            <span>
-              {this.linkify(
-                "The Righteous Mind: Why Good People Are Divided by Politics and Religion",
-                "https://www.goodreads.com/book/show/11324722-the-righteous-mind"
-              )}{" "}
-              by Jonathan Haidt
+              by Ta-Nehisi Coates
             </span>
           ),
         },
