@@ -4,31 +4,36 @@
   padding: 0.25rem;
 }
 
-.nav-link:before {
+.nav-link:before,
+.nav-link:last-child:after {
   content: "";
   display: block;
-  border-top: 2px solid $brand-color_black;
   width: 8rem;
   padding-bottom: 0.5rem;
 }
 
+.nav-link:before {
+  border-top: 2px solid $brand-color_black;
+}
+
 .nav-link:last-child:after {
-  content: "";
-  display: block;
   border-bottom: 2px solid $brand-color_black;
-  width: 8rem;
-  padding-top: 0.5rem;
 }
 
 .nav-link:hover {
-  a::before {
-    display: inline-block;
-    content: "•";
-    margin-right: 0.1rem;
-  }
+  --nav-item-active-indicator-space: 0.3rem;
+
+  a::before,
   a::after {
     display: inline-block;
     content: "•";
-    margin-left: 0.1rem;
+  }
+
+  a::before {
+    margin-right: var(--nav-item-active-indicator-space);
+  }
+
+  a::after {
+    margin-left: var(--nav-item-active-indicator-space);
   }
 }
