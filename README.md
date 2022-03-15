@@ -1,6 +1,6 @@
 # Personal Website
 
-This is the personal website of Asha Camper Singh. [Check it out!](https://www.ashacs.me)
+This is the personal website of Asha Camper Singh. I built it to start playing around with React when I first started becoming interested in frontend development. You can check it out [here](https://www.ashacs.me)!
 
 ## Getting Started
 
@@ -56,7 +56,7 @@ npm run deploy
 
 ## Built With
 
-- [Create React App](https://github.com/facebook/create-react-app) - Used to generate project structure
+- [Create React App](https://github.com/facebook/create-react-app) - Used to set up project structure, transpiler, bundler, React, JSX, and local development server
 - [Sass](https://sass-lang.com) - Used for styling
 
 ## TODO
@@ -66,3 +66,5 @@ npm run deploy
 - [ ] Page content component
 - [ ] Use BEM
 - [ ] Handling routing for subpages
+- [ ] Convert to TypeScript
+- [ ] Perhaps start over from scratch, to improve component composition and CSS
