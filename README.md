@@ -61,10 +61,5 @@ npm run deploy
 
 ## TODO
 
-- [ ] Goodreads integration
-- [ ] Persistent dot indicators in sidebar
-- [ ] Page content component
-- [ ] Use BEM
-- [ ] Handling routing for subpages
-- [ ] Convert to TypeScript
-- [ ] Perhaps start over from scratch, to improve component composition and CSS
+- [ ] Rebuild from the ground up with Typescript
+- [ ] Implement SSR
