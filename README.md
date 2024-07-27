@@ -39,16 +39,14 @@ Then run
 ```
 npm install
 npm run build
-npm run start
+npm run dev
 ```
 
 This will install all required dependencies for the project, build the project, and start the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits. You will also see any lint errors in the console.
-
 ## Deployment
 
-To deploy your changes to [The Internet](http://www.internet-band.com), run
+Github pages is used for hosting, and it can be updated by running
 
 ```
 npm run deploy
@@ -56,10 +54,4 @@ npm run deploy
 
 ## Built With
 
-- [Create React App](https://github.com/facebook/create-react-app) - Used to set up project structure, transpiler, bundler, React, JSX, and local development server
-- [Sass](https://sass-lang.com) - Used for styling
-
-## TODO
-
-- [ ] Rebuild from the ground up with Typescript
-- [ ] Implement SSR
+- [NextJS](https://nextjs.org/)

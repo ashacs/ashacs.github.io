@@ -1,5 +1,4 @@
-import React from "react";
-import "./index.scss";
+import "./index.css";
 
 export function Maintenance() {
   return (
