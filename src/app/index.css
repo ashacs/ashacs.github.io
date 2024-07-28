@@ -1,9 +1,9 @@
 :root {
-  --color_blue-light: #cbdbda;
-  --color_blue-medium: #b1c9c8;
-  --color_blue-dark: #97b7b6;
-  --color_pink-dark: #b45580;
-  --color_black: #000102;
+  --color-blue-light: #cbdbda;
+  --color-blue-medium: #b1c9c8;
+  --color-blue-dark: #97b7b6;
+  --color-pink-dark: #b45580;
+  --color-black: #000102;
 
   --font-primary: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   --font-emphasis: Georgia, "Times New Roman", Times, serif;
