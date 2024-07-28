@@ -1,4 +1,4 @@
-import { Maintenance } from "src/components/Maintenance";
+import { MyResume } from "src/components/MyResume";
 import "./index.css";
 
 export function generateStaticParams() {
@@ -6,5 +6,5 @@ export function generateStaticParams() {
 }
 
 export default function Page() {
-  return <Maintenance />;
+  return <MyResume />;
 }

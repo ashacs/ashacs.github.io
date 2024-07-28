@@ -2,7 +2,10 @@
   --color-blue-light: #cbdbda;
   --color-blue-medium: #b1c9c8;
   --color-blue-dark: #97b7b6;
+  --color-pink-light: #ffc1d1;
   --color-pink-dark: #b45580;
+  --color-purple-light: #c0c0f2;
+  --color-purple-dark: #484881;
   --color-black: #000102;
 
   --font-primary: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -16,6 +19,13 @@
   --spacing-6: 24px;
 }
 
+.root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: auto;
+}
+
 body {
   font-family: var(--font-primary);
   margin: 0;
@@ -23,8 +33,9 @@ body {
   box-sizing: border-box;
 }
 
-.root {
+ul {
+  line-height: var(--spacing-6);
   display: flex;
   flex-direction: column;
-  height: 100%;
+  gap: var(--spacing-1);
 }

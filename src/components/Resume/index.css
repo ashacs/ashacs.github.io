@@ -1,0 +1,9 @@
+.resume-container {
+  background-color: white;
+  margin: var(--spacing-4);
+  padding: var(--spacing-4);
+}
+
+.resume-title {
+  margin: 0;
+}
