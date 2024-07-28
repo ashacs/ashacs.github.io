@@ -1,0 +1,14 @@
+.header {
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid var(--color_pink-dark);
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-2);
+}
+
+.header-title {
+  margin: 0;
+  font-family: var(--font-emphasis);
+}

@@ -1,4 +1,4 @@
-import { Maintenance } from "../components/Maintenance";
+import { Maintenance } from "src/components/Maintenance";
 import "./index.css";
 
 export function generateStaticParams() {

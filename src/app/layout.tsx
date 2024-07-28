@@ -1,6 +1,8 @@
 import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import "./index.css";
+import { Header } from "src/components/Header";
+import { Main } from "src/components/Main";
 
 export const metadata: Metadata = {
   title: "Asha Camper Singh",
@@ -12,14 +14,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en">
       <head>
         <meta property="og:url" content="https://ashacs.me" />
-        <link
-          href="https://fonts.googleapis.com/css?family=Rubik"
-          rel="stylesheet"
-        />
       </head>
       <body>
         <div id="root" className="root">
-          {children}
+          <Header />
+          <Main>{children}</Main>
         </div>
       </body>
     </html>

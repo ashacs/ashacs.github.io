@@ -5,15 +5,26 @@
   --color_pink-dark: #b45580;
   --color_black: #000102;
 
-  --font-primary: "Rubik", Arial, Helvetica, sans-serif;
+  --font-primary: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --font-emphasis: Georgia, "Times New Roman", Times, serif;
+
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 12px;
+  --spacing-4: 16px;
+  --spacing-5: 20px;
+  --spacing-6: 24px;
 }
 
 body {
   font-family: var(--font-primary);
   margin: 0;
   height: 100vh;
+  box-sizing: border-box;
 }
 
 .root {
+  display: flex;
+  flex-direction: column;
   height: 100%;
 }

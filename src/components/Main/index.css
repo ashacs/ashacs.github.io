@@ -1,0 +1,4 @@
+.main {
+  flex-grow: 1;
+  background: linear-gradient(to right, #c0c0f2, #ffc1d1);
+}
