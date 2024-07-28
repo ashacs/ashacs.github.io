@@ -1,5 +1,6 @@
 .main {
   flex-grow: 1;
+  padding: var(--spacing-4);
   background: linear-gradient(
     to right,
     var(--color-purple-light),

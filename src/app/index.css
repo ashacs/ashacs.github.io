@@ -8,6 +8,10 @@
   --color-purple-dark: #484881;
   --color-black: #000102;
 
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+
   --font-primary: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   --font-emphasis: Georgia, "Times New Roman", Times, serif;
 
