@@ -1,4 +1,4 @@
-import { Resume } from "../Resume";
+import { Resume, ResumeMainColumn, ResumeSideColumn } from "../Resume";
 import { MyAwards } from "./MyAwards";
 import { MyEducation } from "./MyEducation";
 import { MyExperience } from "./MyExperience";
@@ -8,11 +8,15 @@ import { MyValues } from "./MyValues";
 export function MyResume() {
   return (
     <Resume>
-      <MyExperience />
-      <MySkills />
-      <MyValues />
-      <MyAwards />
-      <MyEducation />
+      <ResumeMainColumn>
+        <MyExperience />
+      </ResumeMainColumn>
+      <ResumeSideColumn>
+        <MySkills />
+        <MyValues />
+        <MyAwards />
+        <MyEducation />
+      </ResumeSideColumn>
     </Resume>
   );
 }
