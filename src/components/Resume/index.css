@@ -1,11 +1,22 @@
 .resume-container {
-  background-color: white;
+  display: grid;
+  gap: var(--spacing-6);
+  max-width: 1000px;
+  margin: auto;
+  background-color: var(--color-white);
   padding: var(--spacing-4);
   border-radius: var(--border-radius-lg);
 }
 
 .resume-section:not(:last-of-type) {
   margin-bottom: var(--spacing-4);
+}
+
+@media (min-width: 50em) {
+  .resume-container {
+    grid-template-columns: 70% 30%;
+    padding: var(--spacing-6);
+  }
 }
 
 .resume-section-title {

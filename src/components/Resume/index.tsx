@@ -7,3 +7,5 @@ export function Resume({ children }: { children: ReactNode }) {
 
 export { ResumeSectionTitle } from "./SectionTitle";
 export { ResumeSection } from "./Section";
+export { ResumeMainColumn } from "./MainColumn";
+export { ResumeSideColumn } from "./SideColumn";
