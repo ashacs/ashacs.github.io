@@ -4,6 +4,10 @@
   border-radius: var(--border-radius-lg);
 }
 
-.resume-title {
-  margin: 0;
+.resume-section:not(:last-of-type) {
+  margin-bottom: var(--spacing-4);
+}
+
+.resume-section-title {
+  margin-bottom: var(--spacing-4);
 }
