@@ -3,9 +3,9 @@
   gap: calc(var(--spacing-6) * 2);
   max-width: 1000px;
   margin: auto;
-  background-color: var(--color-white);
+  background-color: var(--color-background);
   padding: var(--spacing-4);
-  border: var(--border-width-lg) solid var(--color-black);
+  border: var(--border-width-lg) solid var(--color-foreground);
   border-radius: var(--border-radius-lg);
 }
 

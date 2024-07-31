@@ -1,13 +1,14 @@
 .header {
   position: sticky;
   top: 0;
-  border-bottom: var(--border-width-lg) solid var(--color-black);
-  background-color: var(--color-white);
+  border-bottom: var(--border-width-lg) solid var(--color-foreground);
+  background-color: var(--color-background);
   min-height: 64px;
   display: flex;
   align-items: center;
   padding: var(--spacing-2);
   z-index: 1;
+  justify-content: space-between;
 }
 
 .header-title {

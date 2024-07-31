@@ -1,5 +1,6 @@
 .mark-container {
-  background: var(--color-pink-light);
+  color: var(--color-foreground);
+  background: var(--color-brand-primary);
   padding-right: var(--spacing-1);
   padding-left: var(--spacing-1);
   border-radius: var(--border-radius-sm);
