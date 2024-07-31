@@ -1,7 +1,6 @@
 .maintenance-container {
   height: 100%;
   width: 100%;
-  background: linear-gradient(to right, #9796f0, #fbc7d4);
   display: flex;
   flex-direction: column;
   justify-content: center;

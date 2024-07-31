@@ -1,0 +1,44 @@
+:root {
+  --speech-bubble-pointer-size: 20px;
+  --speech-bubble-pointer-z-index: 1;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.home-resume-container {
+  margin: var(--spacing-5) 0;
+}
+
+.speech-bubble {
+  isolation: isolate;
+  position: relative;
+  background: var(--color-white);
+  border-radius: var(--border-radius-lg);
+  border: var(--border-width-lg) solid var(--color-black);
+  padding: var(--spacing-4);
+  margin-top: var(--speech-bubble-pointer-size);
+  max-width: 540px;
+}
+
+.speech-bubble:before,
+.speech-bubble:after {
+  content: ' ';
+  display: block;
+  position: absolute;
+  top: calc(var(--speech-bubble-pointer-size) * -1);
+  left: var(--speech-bubble-pointer-size);
+  z-index: calc(var(----speech-bubble-pointer-z-index) + 1);
+  overflow: hidden;
+  border: solid 25px transparent;
+  border-top: 0;
+  border-bottom-color: var(--color-white);
+}
+.speech-bubble:before {
+  top: -25px;
+  z-index: var(----speech-bubble-pointer-z-index);
+  border-bottom-color: var(--color-black);
+}

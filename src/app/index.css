@@ -1,19 +1,53 @@
 :root {
-  --color_blue-light: #cbdbda;
-  --color_blue-medium: #b1c9c8;
-  --color_blue-dark: #97b7b6;
-  --color_pink-dark: #b45580;
-  --color_black: #000102;
+  --color-pink-light: #ffc1d1;
+  --color-purple-light: #c0c0f2;
+  --color-black: #000102;
+  --color-white: #faf3fd;
 
-  --font-primary: "Rubik", Arial, Helvetica, sans-serif;
+  --border-width-sm: 1px;
+  --border-width-md: 2px;
+  --border-width-lg: 3px;
+
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+
+  --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-emphasis: Georgia, 'Times New Roman', Times, serif;
+
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 12px;
+  --spacing-4: 16px;
+  --spacing-5: 20px;
+  --spacing-6: 24px;
+}
+
+.root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: auto;
 }
 
 body {
   font-family: var(--font-primary);
   margin: 0;
   height: 100vh;
+  box-sizing: border-box;
 }
 
-.root {
-  height: 100%;
+p,
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+ul {
+  line-height: var(--spacing-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+  margin: 0;
 }

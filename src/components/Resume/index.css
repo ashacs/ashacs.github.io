@@ -1,0 +1,25 @@
+.resume-container {
+  display: grid;
+  gap: calc(var(--spacing-6) * 2);
+  max-width: 1000px;
+  margin: auto;
+  background-color: var(--color-white);
+  padding: var(--spacing-4);
+  border: var(--border-width-lg) solid var(--color-black);
+  border-radius: var(--border-radius-lg);
+}
+
+.resume-section:not(:last-of-type) {
+  margin-bottom: var(--spacing-4);
+}
+
+@media (min-width: 50em) {
+  .resume-container {
+    grid-template-columns: 0.8fr 0.2fr;
+    padding: calc(var(--spacing-6) * 2);
+  }
+}
+
+.resume-section-title {
+  margin-bottom: var(--spacing-4);
+}

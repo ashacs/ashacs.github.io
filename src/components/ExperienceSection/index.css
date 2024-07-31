@@ -1,0 +1,9 @@
+.experience-section-container:not(:last-of-type) {
+  margin-bottom: var(--spacing-2);
+}
+
+.experience-section-subtitle {
+  margin-bottom: var(--spacing-2);
+  font-variant: all-small-caps;
+  font-size: 1.2rem;
+}
