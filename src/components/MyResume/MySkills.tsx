@@ -1,10 +1,11 @@
-import { ResumeSection, ResumeSectionTitle } from "../Resume";
+import { ResumeSection, ResumeSectionTitle } from '../Resume';
+import './index.css';
 
 export function MySkills() {
   return (
     <ResumeSection>
       <ResumeSectionTitle>Skills</ResumeSectionTitle>
-      <ul>
+      <ul className="my-skills-list">
         <li>TypeScript</li>
         <li>React</li>
         <li>HTML</li>

@@ -1,7 +1,7 @@
 .header {
   position: sticky;
   top: 0;
-  border-bottom: 1px solid var(--color-black);
+  border-bottom: var(--border-width-lg) solid var(--color-black);
   background-color: var(--color-white);
   min-height: 64px;
   display: flex;

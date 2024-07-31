@@ -4,12 +4,16 @@
   --color-black: #000102;
   --color-white: #faf3fd;
 
+  --border-width-sm: 1px;
+  --border-width-md: 2px;
+  --border-width-lg: 3px;
+
   --border-radius-sm: 4px;
   --border-radius-md: 8px;
   --border-radius-lg: 12px;
 
-  --font-primary: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  --font-emphasis: Georgia, "Times New Roman", Times, serif;
+  --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-emphasis: Georgia, 'Times New Roman', Times, serif;
 
   --spacing-1: 4px;
   --spacing-2: 8px;
