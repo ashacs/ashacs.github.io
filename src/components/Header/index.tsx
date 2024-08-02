@@ -1,7 +1,11 @@
+import dynamic from 'next/dynamic';
 import { EmailSVG } from '../SVG/EmailSVG';
 import { LinkedInSVG } from '../SVG/LinkedInSVG';
-import { ThemeToggle } from '../ThemeToggle';
 import './index.css';
+
+const DynamicThemeToggle = dynamic(() => import('../ThemeToggle').then(mod => mod.ThemeToggle), {
+  ssr: false,
+});
 
 export function Header() {
   const labels = {
@@ -25,7 +29,7 @@ export function Header() {
         <a aria-label={labels.email} title={labels.email} href="mailto:hello@ashacs.me">
           <EmailSVG />
         </a>
-        <ThemeToggle />
+        <DynamicThemeToggle />
       </div>
     </header>
   );
