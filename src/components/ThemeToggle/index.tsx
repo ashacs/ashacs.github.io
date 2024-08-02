@@ -20,6 +20,11 @@ function getPrioritizedTheme() {
   return storageTheme ?? systemTheme;
 }
 
+const labels = {
+  toggleToDark: 'Toggle to the dark theme',
+  toggleToLight: 'Toggle to the light theme',
+};
+
 export function ThemeToggle() {
   const [theme, setTheme] = useState<Theme>(() => getPrioritizedTheme());
 
@@ -41,10 +46,13 @@ export function ThemeToggle() {
     }
   }, [theme]);
 
+  const label = theme === 'dark' ? labels.toggleToLight : labels.toggleToDark;
+
   return (
     <button
       className="theme-toggle-button"
-      aria-label={theme === 'dark' ? 'Toggle to the light theme' : 'Toggle to the dark theme'}
+      aria-label={label}
+      title={label}
       onClick={() => {
         setTheme(prev => {
           const newTheme = prev === 'dark' ? 'light' : 'dark';
