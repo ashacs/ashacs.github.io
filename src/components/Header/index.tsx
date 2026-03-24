@@ -15,7 +15,11 @@ export function Header() {
         >
           <LinkedInSVG />
         </a>
-        <a aria-label="Send email" title="Send email" href="mailto:hello@ashacs.me">
+        <a
+          aria-label="Send email"
+          title="Send email"
+          href="mailto:hello@ashacs.me"
+        >
           <EmailSVG />
         </a>
       </div>

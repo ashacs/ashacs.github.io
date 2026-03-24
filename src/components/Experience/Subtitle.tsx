@@ -1,5 +1,5 @@
-import type { HTMLAttributes } from "react";
-import "./index.css";
+import type { HTMLAttributes } from 'react';
+import './index.css';
 
 type Props = HTMLAttributes<HTMLHeadingElement>;
 

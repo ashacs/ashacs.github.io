@@ -5,7 +5,7 @@ export function Values() {
   return (
     <Subsection>
       <SubsectionTitle>Values</SubsectionTitle>
-      <List variant='badge'>
+      <List variant="badge">
         <ListItem>Quality</ListItem>
         <ListItem>Craft</ListItem>
         <ListItem>Accessibility</ListItem>

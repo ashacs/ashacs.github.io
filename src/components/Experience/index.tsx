@@ -1,7 +1,7 @@
-import { ExperienceSectionTitle } from "./Title";
-import { ExperienceSectionSubtitle } from "./Subtitle";
-import { Mark } from "../Mark";
-import { List, ListItem } from "../List";
+import { ExperienceSectionTitle } from './Title';
+import { ExperienceSectionSubtitle } from './Subtitle';
+import { Mark } from '../Mark';
+import { List, ListItem } from '../List';
 
 export function Experience() {
   return (
@@ -10,7 +10,9 @@ export function Experience() {
         <ExperienceSectionTitle>
           Lattice — Staff UI Engineer
         </ExperienceSectionTitle>
-        <ExperienceSectionSubtitle>May 2022 – Aug 2024</ExperienceSectionSubtitle>
+        <ExperienceSectionSubtitle>
+          May 2022 – Aug 2024
+        </ExperienceSectionSubtitle>
         <List>
           <ListItem>
             Built high-quality and forward-looking <Mark>React</Mark> components
@@ -26,7 +28,7 @@ export function Experience() {
             Proposed, implemented, <Mark>documented</Mark>, and evangelized
             frontend development improvements across the company, including the
             introduction of <Mark>Storybook</Mark> and creation of tools to
-            allow unit <Mark>testing</Mark> components connected to the{" "}
+            allow unit <Mark>testing</Mark> components connected to the{' '}
             <Mark>GraphQL</Mark> API
           </ListItem>
           <ListItem>
@@ -53,7 +55,9 @@ export function Experience() {
         <ExperienceSectionTitle>
           Salesforce, Trailhead — Engineering Manager
         </ExperienceSectionTitle>
-        <ExperienceSectionSubtitle>Oct 2021 – Apr 2022</ExperienceSectionSubtitle>
+        <ExperienceSectionSubtitle>
+          Oct 2021 – Apr 2022
+        </ExperienceSectionSubtitle>
         <List>
           <ListItem>
             Led <Mark>planning</Mark> and organization of projects that involved
@@ -71,7 +75,9 @@ export function Experience() {
         <ExperienceSectionTitle>
           Salesforce, Trailhead — Lead UI Engineer
         </ExperienceSectionTitle>
-        <ExperienceSectionSubtitle>Aug 2019 – Oct 2021</ExperienceSectionSubtitle>
+        <ExperienceSectionSubtitle>
+          Aug 2019 – Oct 2021
+        </ExperienceSectionSubtitle>
         <List>
           <ListItem>
             Led UI development of the Trailblazer Community (a Q&amp;A forum and
@@ -85,7 +91,7 @@ export function Experience() {
           </ListItem>
           <ListItem>Partnered with product and design on UX decisions</ListItem>
           <ListItem>
-            Collaborated full-stack with backend engineers on our{" "}
+            Collaborated full-stack with backend engineers on our{' '}
             <Mark>GraphQL</Mark> API
           </ListItem>
           <ListItem>
@@ -93,7 +99,7 @@ export function Experience() {
             practices to 50+ engineers
           </ListItem>
           <ListItem>
-            Developed and owned the end-to-end <Mark>localization</Mark>{" "}
+            Developed and owned the end-to-end <Mark>localization</Mark>{' '}
             solution and process
           </ListItem>
         </List>
@@ -103,14 +109,16 @@ export function Experience() {
         <ExperienceSectionTitle>
           Salesforce, Security Platform — Senior Software Engineer
         </ExperienceSectionTitle>
-        <ExperienceSectionSubtitle>Aug 2016 – Aug 2019</ExperienceSectionSubtitle>
+        <ExperienceSectionSubtitle>
+          Aug 2016 – Aug 2019
+        </ExperienceSectionSubtitle>
         <List>
           <ListItem>
             Built a user event processing system using Java, Spring, Kafka, and
             HBase
           </ListItem>
           <ListItem>
-            Partnered with technical writers to produce thorough{" "}
+            Partnered with technical writers to produce thorough{' '}
             <Mark>customer-facing technical documentation</Mark>
           </ListItem>
           <ListItem>

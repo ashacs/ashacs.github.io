@@ -5,7 +5,7 @@ export function Education() {
   return (
     <Subsection>
       <SubsectionTitle>Education</SubsectionTitle>
-      <List variant='bare'>
+      <List variant="bare">
         <ListItem>
           <b>UC San Diego, 2016</b> B.S. Computer Science
         </ListItem>

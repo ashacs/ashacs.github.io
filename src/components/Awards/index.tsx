@@ -5,10 +5,10 @@ export function Awards() {
   return (
     <Subsection>
       <SubsectionTitle>Awards</SubsectionTitle>
-      <List variant='bare'>
+      <List variant="bare">
         <ListItem>
-          <b>U.S. Patent No. 11216785</b> System and Method for a single, unified, community and
-          learning experience
+          <b>U.S. Patent No. 11216785</b> System and Method for a single,
+          unified, community and learning experience
         </ListItem>
       </List>
     </Subsection>

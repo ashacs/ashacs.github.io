@@ -2,15 +2,15 @@
 
 :root {
   /* Light theme (default) */
-  --page-bg: #F8F5F0;
-  --page-text: #1B1A17;
-  --page-text-muted: #6B685F;
-  --page-border: #D6D1C8;
+  --page-bg: #f8f5f0;
+  --page-text: #1b1a17;
+  --page-text-muted: #6b685f;
+  --page-border: #d6d1c8;
   --page-highlight: rgba(27, 26, 23, 0.07);
-  --toolbar-bg: #EDEAE4;
-  --toolbar-text: #1B1A17;
-  --toolbar-border: #C8C3BA;
-  --panel-bg: #F0EDE7;
+  --toolbar-bg: #edeae4;
+  --toolbar-text: #1b1a17;
+  --toolbar-border: #c8c3ba;
+  --panel-bg: #f0ede7;
 
   /* Reader-adjustable vars (overridden by JS) */
   --reader-font-size: 17px;
@@ -34,28 +34,28 @@
   --z-index-panel: 300;
 }
 
-:root[data-theme="sepia"] {
-  --page-bg: #F5EBDA;
-  --page-text: #2E1F0F;
-  --page-text-muted: #7D6245;
-  --page-border: #C9AA7C;
+:root[data-theme='sepia'] {
+  --page-bg: #f5ebda;
+  --page-text: #2e1f0f;
+  --page-text-muted: #7d6245;
+  --page-border: #c9aa7c;
   --page-highlight: rgba(46, 31, 15, 0.08);
-  --toolbar-bg: #ECD9BE;
-  --toolbar-text: #2E1F0F;
-  --toolbar-border: #C9AA7C;
-  --panel-bg: #EFE3CC;
+  --toolbar-bg: #ecd9be;
+  --toolbar-text: #2e1f0f;
+  --toolbar-border: #c9aa7c;
+  --panel-bg: #efe3cc;
 }
 
-:root[data-theme="dark"] {
-  --page-bg: #1E1C19;
-  --page-text: #D2CBBA;
-  --page-text-muted: #8A8478;
-  --page-border: #3C3930;
+:root[data-theme='dark'] {
+  --page-bg: #1e1c19;
+  --page-text: #d2cbba;
+  --page-text-muted: #8a8478;
+  --page-border: #3c3930;
   --page-highlight: rgba(210, 203, 186, 0.1);
   --toolbar-bg: #262420;
-  --toolbar-text: #D2CBBA;
-  --toolbar-border: #3C3930;
-  --panel-bg: #2C2A25;
+  --toolbar-text: #d2cbba;
+  --toolbar-border: #3c3930;
+  --panel-bg: #2c2a25;
 }
 
 /* ─── Font Family Switching ─── */
@@ -63,11 +63,11 @@ body {
   font-family: var(--font-literata, Georgia, serif);
 }
 
-:root[data-font="garamond"] body {
+:root[data-font='garamond'] body {
   font-family: var(--font-garamond, Georgia, serif);
 }
 
-:root[data-font="sans"] body {
+:root[data-font='sans'] body {
   font-family: var(--font-sans, 'Helvetica Neue', Arial, sans-serif);
 }
 
@@ -90,7 +90,9 @@ body {
   margin: 0;
   min-height: 100vh;
   text-rendering: optimizeLegibility;
-  transition: background 0.2s ease, color 0.2s ease;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
   -webkit-font-smoothing: antialiased;
 }
 

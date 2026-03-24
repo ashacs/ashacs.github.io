@@ -5,7 +5,7 @@ export function Skills() {
   return (
     <Subsection>
       <SubsectionTitle>Skills</SubsectionTitle>
-      <List variant='badge'>
+      <List variant="badge">
         <ListItem>TypeScript</ListItem>
         <ListItem>React</ListItem>
         <ListItem>HTML</ListItem>
