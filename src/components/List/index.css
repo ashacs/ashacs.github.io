@@ -1,0 +1,35 @@
+.list {
+  display: flex;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+}
+
+.list_badge {
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.list_bare {
+  list-style: none;
+  flex-direction: column;
+}
+
+.list_bullet {
+  flex-direction: column;
+}
+
+.list-item {
+  color: var(--page-text);
+}
+
+.list_badge .list-item {
+  border: 1px solid var(--page-border);
+  border-radius: 3px;
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+  padding: 3px 9px;
+  transition: border-color 0.15s ease;
+}

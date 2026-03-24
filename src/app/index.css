@@ -1,19 +1,21 @@
+/* ─── E-Reader Inspired Theme (I love my Kobo Clara BW <3) ─── */
+
 :root {
-  --color-brand-primary: #ffc1d1;
-  --color-brand-secondary: #c0c0f2;
-  --color-foreground: #000102;
-  --color-background: #faf3fd;
+  /* Light theme (default) */
+  --page-bg: #F8F5F0;
+  --page-text: #1B1A17;
+  --page-text-muted: #6B685F;
+  --page-border: #D6D1C8;
+  --page-highlight: rgba(27, 26, 23, 0.07);
+  --toolbar-bg: #EDEAE4;
+  --toolbar-text: #1B1A17;
+  --toolbar-border: #C8C3BA;
+  --panel-bg: #F0EDE7;
 
-  --border-width-sm: 1px;
-  --border-width-md: 2px;
-  --border-width-lg: 3px;
-
-  --border-radius-sm: 4px;
-  --border-radius-md: 8px;
-  --border-radius-lg: 12px;
-
-  --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  --font-emphasis: Georgia, 'Times New Roman', Times, serif;
+  /* Reader-adjustable vars (overridden by JS) */
+  --reader-font-size: 17px;
+  --reader-line-height: 1.75;
+  --reader-margin: clamp(1.5rem, 8vw, 6rem);
 
   --spacing-1: 4px;
   --spacing-2: 8px;
@@ -21,41 +23,92 @@
   --spacing-4: 16px;
   --spacing-5: 20px;
   --spacing-6: 24px;
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  --border-width-sm: 1px;
+  --border-width-md: 2px;
+  --border-width-lg: 3px;
+  --z-index-header: 100;
+  --z-index-toolbar: 200;
+  --z-index-panel: 300;
 }
 
-:root[data-theme='dark'] {
-  --color-brand-primary: #853a56;
-  --color-brand-secondary: #353562;
-  --color-foreground: #faf3fd;
-  --color-background: #14011c;
+:root[data-theme="sepia"] {
+  --page-bg: #F5EBDA;
+  --page-text: #2E1F0F;
+  --page-text-muted: #7D6245;
+  --page-border: #C9AA7C;
+  --page-highlight: rgba(46, 31, 15, 0.08);
+  --toolbar-bg: #ECD9BE;
+  --toolbar-text: #2E1F0F;
+  --toolbar-border: #C9AA7C;
+  --panel-bg: #EFE3CC;
+}
+
+:root[data-theme="dark"] {
+  --page-bg: #1E1C19;
+  --page-text: #D2CBBA;
+  --page-text-muted: #8A8478;
+  --page-border: #3C3930;
+  --page-highlight: rgba(210, 203, 186, 0.1);
+  --toolbar-bg: #262420;
+  --toolbar-text: #D2CBBA;
+  --toolbar-border: #3C3930;
+  --panel-bg: #2C2A25;
+}
+
+/* ─── Font Family Switching ─── */
+body {
+  font-family: var(--font-literata, Georgia, serif);
+}
+
+:root[data-font="garamond"] body {
+  font-family: var(--font-garamond, Georgia, serif);
+}
+
+:root[data-font="sans"] body {
+  font-family: var(--font-sans, 'Helvetica Neue', Arial, sans-serif);
+}
+
+/* ─── Global Base ─── */
+
+html {
+  height: 100%;
 }
 
 .root {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  overflow: auto;
+  min-height: 100vh;
 }
 
 body {
-  font-family: var(--font-primary);
-  color: var(--color-foreground);
-  margin: 0;
-  height: 100vh;
+  background: var(--page-bg);
   box-sizing: border-box;
+  color: var(--page-text);
+  margin: 0;
+  min-height: 100vh;
+  text-rendering: optimizeLegibility;
+  transition: background 0.2s ease, color 0.2s ease;
+  -webkit-font-smoothing: antialiased;
 }
 
 p,
 h1,
 h2,
-h3 {
+h3,
+h4 {
   margin: 0;
 }
 
 ul {
-  line-height: var(--spacing-6);
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-1);
+  gap: var(--spacing-2);
   margin: 0;
+}
+
+a {
+  color: var(--page-text);
 }

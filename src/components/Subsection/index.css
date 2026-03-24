@@ -1,0 +1,12 @@
+.subsection:not(:last-of-type) {
+  margin-bottom: var(--spacing-4);
+}
+
+.subsection-title {
+  color: var(--page-text-muted);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--spacing-4);
+  text-transform: uppercase;
+}
