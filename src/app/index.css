@@ -1,3 +1,49 @@
+/* ─── CSS Reset (from our hero joshwcomeau.com/css/custom-css-reset) ─── */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+*:not(dialog) {
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
 /* ─── E-Reader Inspired Theme (I love my Kobo Clara BW <3) ─── */
 
 :root {
@@ -90,30 +136,18 @@ html {
 
 body {
   background: var(--page-bg);
-  box-sizing: border-box;
   color: var(--page-text);
-  margin: 0;
   min-height: 100vh;
   text-rendering: optimizeLegibility;
   transition:
     background 0.2s ease,
     color 0.2s ease;
-  -webkit-font-smoothing: antialiased;
-}
-
-p,
-h1,
-h2,
-h3,
-h4 {
-  margin: 0;
 }
 
 ul {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-2);
-  margin: 0;
 }
 
 a {
