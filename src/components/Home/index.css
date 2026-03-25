@@ -6,15 +6,3 @@
   max-width: 680px;
   padding-bottom: 88px;
 }
-
-.authors-note {
-  margin: 3rem 0 3.5rem;
-  text-align: center;
-}
-
-.authors-note-text {
-  color: var(--page-text);
-  font-style: italic;
-  margin: 0 auto;
-  max-width: 44ch;
-}
