@@ -1,19 +1,93 @@
+/* ─── CSS Reset (from our hero joshwcomeau.com/css/custom-css-reset) ─── */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+*:not(dialog) {
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* ─── E-Reader Inspired Theme (I love my Kobo Clara BW <3) ─── */
+
 :root {
-  --color-brand-primary: #ffc1d1;
-  --color-brand-secondary: #c0c0f2;
-  --color-foreground: #000102;
-  --color-background: #faf3fd;
+  /* Static per-theme background colours — used by theme swatches and --page-bg */
+  --theme-bg-light: #f8f5f0;
+  --theme-bg-sepia: #f5ebda;
+  --theme-bg-dark: #1e1c19;
 
-  --border-width-sm: 1px;
-  --border-width-md: 2px;
-  --border-width-lg: 3px;
+  /* Light theme (default) */
+  --page-bg: var(--theme-bg-light);
+  --page-text: #1b1a17;
+  --page-text-muted: #6b685f;
+  --page-border: #d6d1c8;
+  --page-highlight: rgba(27, 26, 23, 0.07);
+  --toolbar-bg: #edeae4;
+  --toolbar-text: #1b1a17;
+  --toolbar-border: #c8c3ba;
+  --panel-bg: #f0ede7;
 
-  --border-radius-sm: 4px;
-  --border-radius-md: 8px;
-  --border-radius-lg: 12px;
-
-  --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  --font-emphasis: Georgia, 'Times New Roman', Times, serif;
+  /* Reader-adjustable vars (overridden by JS) */
+  --reader-font-size: 17px;
+  --reader-line-height: 1.75;
+  --reader-margin: clamp(1rem, 5vw, 3rem);
 
   --spacing-1: 4px;
   --spacing-2: 8px;
@@ -21,41 +95,76 @@
   --spacing-4: 16px;
   --spacing-5: 20px;
   --spacing-6: 24px;
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  --border-width-sm: 1px;
+  --border-width-md: 2px;
+  --border-width-lg: 3px;
+  --z-index-header: 100;
+  --z-index-toolbar: 200;
+  --z-index-dialog: 300;
+}
+
+:root[data-theme='sepia'] {
+  --page-bg: var(--theme-bg-sepia);
+  --page-text: #2e1f0f;
+  --page-text-muted: #7d6245;
+  --page-border: #c9aa7c;
+  --page-highlight: rgba(46, 31, 15, 0.08);
+  --toolbar-bg: #ecd9be;
+  --toolbar-text: #2e1f0f;
+  --toolbar-border: #c9aa7c;
+  --panel-bg: #efe3cc;
 }
 
 :root[data-theme='dark'] {
-  --color-brand-primary: #853a56;
-  --color-brand-secondary: #353562;
-  --color-foreground: #faf3fd;
-  --color-background: #14011c;
+  --page-bg: var(--theme-bg-dark);
+  --page-text: #d2cbba;
+  --page-text-muted: #8a8478;
+  --page-border: #3c3930;
+  --page-highlight: rgba(210, 203, 186, 0.1);
+  --toolbar-bg: #262420;
+  --toolbar-text: #d2cbba;
+  --toolbar-border: #3c3930;
+  --panel-bg: #2c2a25;
+}
+
+/* ─── Font Family Switching ─── */
+body {
+  font-family: var(--font-literata, Georgia, serif);
+}
+
+:root[data-font='garamond'] body {
+  font-family: var(--font-garamond, Georgia, serif);
+}
+
+:root[data-font='sans'] body {
+  font-family: var(--font-sans, 'Helvetica Neue', Arial, sans-serif);
+}
+
+/* ─── Global Base ─── */
+
+html {
+  height: 100%;
 }
 
 .root {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  overflow: auto;
+  min-height: 100vh;
 }
 
 body {
-  font-family: var(--font-primary);
-  color: var(--color-foreground);
-  margin: 0;
-  height: 100vh;
-  box-sizing: border-box;
+  background: var(--page-bg);
+  color: var(--page-text);
+  min-height: 100vh;
+  text-rendering: optimizeLegibility;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
 }
 
-p,
-h1,
-h2,
-h3 {
-  margin: 0;
-}
-
-ul {
-  line-height: var(--spacing-6);
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-1);
-  margin: 0;
+a {
+  color: var(--page-text);
 }

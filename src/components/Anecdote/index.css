@@ -1,0 +1,7 @@
+.anecdote {
+  color: var(--page-text);
+  font-style: italic;
+  margin: 0 auto;
+  max-width: 44ch;
+  text-align: center;
+}

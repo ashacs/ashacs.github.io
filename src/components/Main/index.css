@@ -1,5 +1,6 @@
 .main {
+  background: var(--page-bg);
   flex-grow: 1;
-  padding: var(--spacing-4);
-  background: linear-gradient(to right, var(--color-brand-secondary), var(--color-brand-primary));
+  transition: background 0.25s ease;
+  width: 100%;
 }

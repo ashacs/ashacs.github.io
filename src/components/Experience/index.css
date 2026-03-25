@@ -1,0 +1,19 @@
+.experience-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.experience-section-title {
+  color: var(--page-text);
+  font-size: 1.05em;
+  font-weight: 600;
+  line-height: 1.35;
+  margin-bottom: 0.2rem;
+}
+
+.experience-section-subtitle {
+  color: var(--page-text-muted);
+  font-size: 0.82em;
+  margin-bottom: 0.6rem;
+}

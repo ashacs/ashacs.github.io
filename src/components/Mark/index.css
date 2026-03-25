@@ -1,8 +1,7 @@
 .mark-container {
-  color: var(--color-foreground);
-  background: var(--color-brand-primary);
-  padding-right: var(--spacing-1);
-  padding-left: var(--spacing-1);
-  border-radius: var(--border-radius-sm);
-  font-weight: 700;
+  background: var(--page-highlight);
+  border-radius: 1px;
+  color: inherit;
+  font-weight: 600;
+  padding: 0 2px;
 }
