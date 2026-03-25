@@ -1,7 +1,8 @@
 .home-container {
+  box-sizing: border-box;
   font-size: var(--reader-font-size);
   line-height: var(--reader-line-height);
-  margin: 0 auto;
+  padding: 0 var(--reader-margin);
   max-width: 680px;
   padding-bottom: 88px;
 }

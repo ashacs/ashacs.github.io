@@ -1,0 +1,335 @@
+.toolbar {
+  background: var(--toolbar-bg);
+  border-top: var(--border-width-sm) solid var(--toolbar-border);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease;
+  z-index: var(--z-index-toolbar);
+}
+
+.toolbar-progressbar-container {
+  background: var(--page-border);
+  height: 2px;
+  position: relative;
+}
+
+.toolbar-progressbar {
+  background: var(--toolbar-text);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: width 0.12s linear;
+}
+
+.toolbar-content {
+  align-items: center;
+  display: flex;
+  height: 38px;
+  justify-content: space-between;
+  padding: 0 0.875rem;
+}
+
+.reader-progress-label {
+  color: var(--page-text-muted);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  min-width: 4ch;
+}
+
+.reader-aa-btn {
+  background: transparent;
+  border: var(--border-width-md) solid var(--page-border);
+  border-radius: var(--border-radius-sm);
+  color: var(--toolbar-text);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: var(--spacing-1) var(--spacing-2);
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.reader-aa-btn:hover,
+.reader-aa-btn_active {
+  background: var(--page-highlight);
+  border-color: var(--page-text-muted);
+}
+
+/* ─── Settings Overlay ─── */
+
+.reading-settings-dialog {
+  inset: 0;
+  position: fixed;
+  z-index: var(--z-index-dialog);
+}
+
+.reading-settings {
+  animation: popoverIn 0.16s cubic-bezier(0.32, 0.72, 0, 1);
+  background: var(--panel-bg);
+  border: var(--border-width-sm) solid var(--page-border);
+  border-radius: var(--border-radius-lg);
+  bottom: 48px;
+  box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.04),
+    0 12px 28px rgba(0, 0, 0, 0.1),
+    0 1px 2px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+  max-height: calc(100vh - 80px);
+  max-width: calc(100vw - 24px);
+  padding: 14px 14px 16px;
+  position: fixed;
+  overflow: auto;
+  right: 12px;
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease;
+  width: 268px;
+  z-index: var(--z-index-dialog);
+}
+
+@keyframes popoverIn {
+  from {
+    opacity: 0.6;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reading-settings_closing {
+  animation: popoverOut 0.15s cubic-bezier(0.4, 0, 1, 1) forwards;
+}
+
+@keyframes popoverOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+
+.reading-settings-fieldset {
+  border: none;
+  margin: 0;
+  min-width: 0;
+  padding: 0;
+}
+
+.reading-settings-label {
+  color: var(--page-text-muted);
+  display: block;
+  font-size: 0.58rem;
+  font-weight: 400;
+  letter-spacing: 0.24em;
+  margin-bottom: var(--spacing-2);
+  text-transform: uppercase;
+}
+
+.reading-settings-row {
+  display: flex;
+  gap: var(--spacing-2);
+}
+
+.reading-settings-btn {
+  align-items: center;
+  background: transparent;
+  border: 1.5px solid var(--page-border);
+  border-radius: 8px;
+  color: var(--page-text);
+  cursor: pointer;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  font-family: inherit;
+  font-size: 0.65rem;
+  gap: var(--spacing-1);
+  letter-spacing: 0.04em;
+  padding: var(--spacing-2) var(--spacing-1);
+  transition:
+    border-color 0.15s ease,
+    background 0.15s ease;
+}
+
+.reading-settings-btn[aria-pressed='true'] {
+  background: var(--page-highlight);
+  border-color: var(--page-text);
+}
+
+/* ─── Theme Buttons ─── */
+
+.reader-theme-swatch {
+  border: var(--border-width-sm) solid rgba(0, 0, 0, 0.1);
+  border-radius: var(--border-radius-sm);
+  display: block;
+  height: 16px;
+  width: 22px;
+}
+
+.reader-theme-btn_light .reader-theme-swatch {
+  background: var(--theme-bg-light);
+}
+.reader-theme-btn_sepia .reader-theme-swatch {
+  background: var(--theme-bg-sepia);
+}
+.reader-theme-btn_dark .reader-theme-swatch {
+  background: var(--theme-bg-dark);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ─── Font Buttons ─── */
+
+.reader-font-btn {
+  font-size: 0.95rem;
+  gap: 2px;
+}
+
+.reader-font-label {
+  color: var(--page-text-muted);
+  font-family: var(--font-literata, Georgia, serif) !important;
+  font-size: 0.58rem;
+  letter-spacing: 0.06em;
+}
+
+/* ─── Size Control ─── */
+
+.reader-size-control {
+  align-items: stretch;
+  border: 1.5px solid var(--page-border);
+  border-radius: var(--border-radius-md);
+  display: flex;
+  gap: 0;
+  overflow: hidden;
+  transition: border-color 0.15s ease;
+}
+
+.reader-size-adj {
+  align-items: center;
+  background: transparent;
+  border: none;
+  color: var(--page-text);
+  cursor: pointer;
+  display: flex;
+  flex-shrink: 0;
+  font-family: inherit;
+  gap: 1px;
+  padding: var(--spacing-2) var(--spacing-3);
+}
+
+.reader-size-adj:disabled {
+  color: var(--page-text-muted);
+  cursor: default;
+}
+
+.reader-size-adj-sym {
+  font-size: 0.72rem;
+}
+
+.reader-size-dots {
+  align-items: center;
+  border-left: 1.5px solid var(--page-border);
+  border-right: 1.5px solid var(--page-border);
+  display: flex;
+  flex: 1;
+  gap: var(--spacing-2);
+  justify-content: center;
+  padding: 0 var(--spacing-3);
+}
+
+.reader-size-dot {
+  background: var(--page-border);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 7px;
+  padding: 0;
+  transition:
+    background 0.15s ease,
+    transform 0.15s ease;
+  width: 7px;
+}
+
+.reader-size-dot_active {
+  background: var(--page-text);
+  transform: scale(1.45);
+}
+
+/* ─── Spacing Buttons ─── */
+
+.reader-spacing-btn {
+  justify-content: center;
+}
+
+.reader-spacing-icon {
+  display: flex;
+  flex-direction: column;
+  width: 18px;
+}
+
+.reader-spacing-icon span {
+  background: currentColor;
+  border-radius: 1px;
+  display: block;
+  height: 2px;
+  opacity: 0.65;
+}
+
+.reader-spacing-icon_compact span {
+  margin-bottom: 2px;
+}
+.reader-spacing-icon_normal span {
+  margin-bottom: 3px;
+}
+.reader-spacing-icon_relaxed span {
+  margin-bottom: 5px;
+}
+.reader-spacing-icon span:last-child {
+  margin-bottom: 0;
+}
+
+/* ─── Margin Buttons ─── */
+
+.reader-margin-icon {
+  border: 1.5px solid currentColor;
+  border-radius: 2px;
+  height: 15px;
+  opacity: 0.65;
+  position: relative;
+  width: 20px;
+}
+
+.reader-margin-icon .reader-margin-icon-inner {
+  background: currentColor;
+  border-radius: 1px;
+  bottom: 3px;
+  opacity: 0.4;
+  position: absolute;
+  top: 3px;
+}
+
+.reader-margin-icon_narrow .reader-margin-icon-inner {
+  left: 1px;
+  right: 1px;
+}
+.reader-margin-icon_medium .reader-margin-icon-inner {
+  left: 4px;
+  right: 4px;
+}
+.reader-margin-icon_wide .reader-margin-icon-inner {
+  left: 6px;
+  right: 6px;
+}

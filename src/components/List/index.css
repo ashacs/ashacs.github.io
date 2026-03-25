@@ -18,6 +18,7 @@
 
 .list_bullet {
   flex-direction: column;
+  padding-left: 20px;
 }
 
 .list-item {

@@ -1,8 +1,13 @@
 /* ─── E-Reader Inspired Theme (I love my Kobo Clara BW <3) ─── */
 
 :root {
+  /* Static per-theme background colours — used by theme swatches and --page-bg */
+  --theme-bg-light: #f8f5f0;
+  --theme-bg-sepia: #f5ebda;
+  --theme-bg-dark: #1e1c19;
+
   /* Light theme (default) */
-  --page-bg: #f8f5f0;
+  --page-bg: var(--theme-bg-light);
   --page-text: #1b1a17;
   --page-text-muted: #6b685f;
   --page-border: #d6d1c8;
@@ -15,7 +20,7 @@
   /* Reader-adjustable vars (overridden by JS) */
   --reader-font-size: 17px;
   --reader-line-height: 1.75;
-  --reader-margin: clamp(1.5rem, 8vw, 6rem);
+  --reader-margin: clamp(1rem, 5vw, 3rem);
 
   --spacing-1: 4px;
   --spacing-2: 8px;
@@ -31,11 +36,11 @@
   --border-width-lg: 3px;
   --z-index-header: 100;
   --z-index-toolbar: 200;
-  --z-index-panel: 300;
+  --z-index-dialog: 300;
 }
 
 :root[data-theme='sepia'] {
-  --page-bg: #f5ebda;
+  --page-bg: var(--theme-bg-sepia);
   --page-text: #2e1f0f;
   --page-text-muted: #7d6245;
   --page-border: #c9aa7c;
@@ -47,7 +52,7 @@
 }
 
 :root[data-theme='dark'] {
-  --page-bg: #1e1c19;
+  --page-bg: var(--theme-bg-dark);
   --page-text: #d2cbba;
   --page-text-muted: #8a8478;
   --page-border: #3c3930;

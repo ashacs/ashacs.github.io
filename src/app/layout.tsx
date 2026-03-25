@@ -30,6 +30,11 @@ const sourceSans3 = Source_Sans_3({
   display: 'swap',
 });
 
+const DynamicToolbar = dynamic(
+  () => import('src/components/Toolbar').then((mod) => mod.Toolbar),
+  { ssr: false }
+);
+
 export const metadata: Metadata = {
   title: 'Asha Camper Singh',
   description: 'You found my personal website! Feel free to say hello 👋',
@@ -47,6 +52,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <div id="root" className="root">
           <Header />
           <Main>{children}</Main>
+          <DynamicToolbar />
         </div>
       </body>
     </html>
