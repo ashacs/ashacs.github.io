@@ -14,9 +14,10 @@ export function Home() {
       <section>
         <SectionTitle>Authorʼs Note</SectionTitle>
         <Anecdote>
-          Welcome to my personal website. Iʼm a frontend-focused developer with
-          a desire to work alongside thoughtful teammates on high-quality
-          products.
+          Building UI scratches my itch for logic, but it also brings me closer
+          to the user on the other side of the screen (thatʼs you! hello!).
+          Software touches real people. So can we use these clickity-clack
+          machines for good? I hope so.
         </Anecdote>
       </section>
 
