@@ -21,6 +21,7 @@ export function Skills() {
         <ListItem>Node.js</ListItem>
         <ListItem>Git</ListItem>
         <ListItem>Internationalization</ListItem>
+        <ListItem>Code review</ListItem>
         <ListItem>Documentation</ListItem>
         <ListItem>Public speaking</ListItem>
         <ListItem>Project management</ListItem>
