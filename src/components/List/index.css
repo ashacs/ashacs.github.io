@@ -28,7 +28,7 @@
 .list_badge .list-item {
   border: 1px solid var(--page-border);
   border-radius: 3px;
-  font-size: 0.78rem;
+  font-size: 0.78em;
   letter-spacing: 0.02em;
   line-height: 1.5;
   padding: 3px 9px;

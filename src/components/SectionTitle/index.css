@@ -13,7 +13,7 @@
 
 .section-title {
   color: var(--page-text-muted);
-  font-size: 0.82rem;
+  font-size: 0.82em;
   letter-spacing: 0.02em;
   white-space: nowrap;
 }
