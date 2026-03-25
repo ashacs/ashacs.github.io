@@ -5,6 +5,7 @@ import { Skills } from '../Skills';
 import { Values } from '../Values';
 import { SectionTitle } from '../SectionTitle';
 import './index.css';
+import { ContinuedReading } from '../ContinuedReading';
 import Anecdote from '../Anecdote';
 
 export function Home() {
@@ -36,6 +37,10 @@ export function Home() {
         <Education />
       </section>
 
+      <section>
+        <SectionTitle>Continued Reading</SectionTitle>
+        <ContinuedReading />
+      </section>
     </div>
   );
 }

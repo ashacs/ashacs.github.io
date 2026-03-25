@@ -1,0 +1,63 @@
+.continued-reading {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+}
+
+/* ornament between entries */
+.book-entry:not(:last-child)::after {
+  align-items: center;
+  color: var(--page-text-muted);
+  content: '— ❧ —';
+  display: block;
+  font-size: 1rem;
+  grid-column: 1 / -1;
+  letter-spacing: 0.5em;
+  margin-top: var(--spacing-2);
+  text-align: center;
+}
+
+.book-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.book-title {
+  font-size: var(--reader-font-size);
+  font-style: italic;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.book-author {
+  color: var(--page-text-muted);
+  font-size: 0.78em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.book-quote {
+  border-left: 2px solid var(--page-border);
+  color: var(--page-text-muted);
+  font-size: 0.93em;
+  font-style: italic;
+  line-height: var(--reader-line-height);
+  margin: 0;
+  padding-left: var(--spacing-4);
+}
+
+.book-commentary {
+  font-size: 0.93em;
+  line-height: var(--reader-line-height);
+}
+
+.continued-reading-colophon {
+  color: var(--page-text-muted);
+  font-size: 0.8em;
+  font-style: italic;
+  letter-spacing: 0.02em;
+  text-align: center;
+  width: 55ch;
+  margin: 0 auto;
+}
