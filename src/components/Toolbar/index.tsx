@@ -72,6 +72,16 @@ export function Toolbar() {
   }, [settings]);
 
   useEffect(() => {
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (!isReadingSettingsOpen) return;
+      if (e.key === 'Escape') closePanel();
+    };
+
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, [isReadingSettingsOpen]);
+
+  useEffect(() => {
     const onScroll = () => {
       const total = document.documentElement.scrollHeight - window.innerHeight;
       setProgress(total > 0 ? Math.min(1, window.scrollY / total) : 0);
