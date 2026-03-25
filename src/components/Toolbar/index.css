@@ -58,25 +58,17 @@
 }
 
 .reader-aa-btn:hover,
-.reader-aa-btn_active {
+.reader-aa-btn[data-state='open'] {
   background: var(--page-highlight);
   border-color: var(--page-text-muted);
 }
 
-/* ─── Settings Overlay ─── */
-
-.reading-settings-dialog {
-  inset: 0;
-  position: fixed;
-  z-index: var(--z-index-dialog);
-}
+/* ─── Settings Popover ─── */
 
 .reading-settings {
-  animation: popoverIn 0.16s cubic-bezier(0.32, 0.72, 0, 1);
   background: var(--panel-bg);
   border: var(--border-width-sm) solid var(--page-border);
   border-radius: var(--border-radius-lg);
-  bottom: 48px;
   box-shadow:
     0 4px 6px rgba(0, 0, 0, 0.04),
     0 12px 28px rgba(0, 0, 0, 0.1),
@@ -86,15 +78,21 @@
   gap: var(--spacing-2);
   max-height: calc(100vh - 80px);
   max-width: calc(100vw - 24px);
-  padding: 14px 14px 16px;
-  position: fixed;
   overflow: auto;
-  right: 12px;
+  padding: 14px 14px 16px;
   transition:
     background 0.25s ease,
     border-color 0.25s ease;
   width: 268px;
   z-index: var(--z-index-dialog);
+}
+
+.reading-settings[data-state='open'] {
+  animation: popoverIn 0.16s cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+.reading-settings[data-state='closed'] {
+  animation: popoverOut 0.15s cubic-bezier(0.4, 0, 1, 1) forwards;
 }
 
 @keyframes popoverIn {
@@ -106,10 +104,6 @@
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.reading-settings_closing {
-  animation: popoverOut 0.15s cubic-bezier(0.4, 0, 1, 1) forwards;
 }
 
 @keyframes popoverOut {

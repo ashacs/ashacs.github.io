@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import * as Popover from '@radix-ui/react-popover';
 import './index.css';
 
 type Theme = 'light' | 'sepia' | 'dark';
@@ -63,23 +64,11 @@ function applySettings(s: Settings) {
 
 export function Toolbar() {
   const [settings, setSettings] = useState<Settings>(() => loadSettings());
-  const [isReadingSettingsOpen, setPanelOpen] = useState(false);
-  const [panelClosing, setPanelClosing] = useState(false);
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
     applySettings(settings);
   }, [settings]);
-
-  useEffect(() => {
-    const onKeyDown = (e: KeyboardEvent) => {
-      if (!isReadingSettingsOpen) return;
-      if (e.key === 'Escape') closePanel();
-    };
-
-    window.addEventListener('keydown', onKeyDown);
-    return () => window.removeEventListener('keydown', onKeyDown);
-  }, [isReadingSettingsOpen]);
 
   useEffect(() => {
     const onScroll = () => {
@@ -92,14 +81,6 @@ export function Toolbar() {
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
-
-  function closePanel() {
-    setPanelClosing(true);
-    setTimeout(() => {
-      setPanelOpen(false);
-      setPanelClosing(false);
-    }, 150);
-  }
 
   function updateSetting<K extends keyof Settings>(key: K, value: Settings[K]) {
     setSettings((prev) => {
@@ -134,7 +115,7 @@ export function Toolbar() {
   const margins: Margin[] = ['narrow', 'medium', 'wide'];
 
   return (
-    <>
+    <Popover.Root>
       <div className="toolbar" role="toolbar" aria-label="Reading controls">
         <div className="toolbar-progressbar-container">
           <div
@@ -149,170 +130,152 @@ export function Toolbar() {
         </div>
         <div className="toolbar-content">
           <span className="reader-progress-label">{pct}%</span>
-          <button
-            className={`reader-aa-btn ${isReadingSettingsOpen ? 'reader-aa-btn_active' : ''}`}
-            onClick={() =>
-              isReadingSettingsOpen ? closePanel() : setPanelOpen(true)
-            }
-            aria-label="Reading settings"
-            aria-expanded={isReadingSettingsOpen}
-            aria-haspopup="dialog"
-          >
-            Aa
-          </button>
+          <Popover.Trigger asChild>
+            <button className="reader-aa-btn" aria-label="Reading settings">
+              Aa
+            </button>
+          </Popover.Trigger>
         </div>
       </div>
 
-      {/* Settings panel */}
-      {isReadingSettingsOpen && (
-        <>
-          <div
-            className="reading-settings-dialog"
-            onClick={closePanel}
-            role="presentation"
-          />
-          <div
-            className={`reading-settings ${panelClosing ? 'reading-settings_closing' : ''}`}
-            role="dialog"
-            aria-label="Reading settings"
-          >
-            {/* Theme */}
-            <fieldset className="reading-settings-fieldset">
-              <legend className="reading-settings-label">Theme</legend>
-              <div className="reading-settings-row">
-                {themes.map((t) => (
-                  <button
-                    key={t}
-                    className={`reading-settings-btn reader-theme-btn_${t}`}
-                    onClick={() => updateSetting('theme', t)}
-                    aria-pressed={settings.theme === t}
-                  >
-                    <span className="reader-theme-swatch" aria-hidden="true" />
-                    <span>{t.charAt(0).toUpperCase() + t.slice(1)}</span>
-                  </button>
-                ))}
-              </div>
-            </fieldset>
-
-            {/* Font */}
-            <fieldset className="reading-settings-fieldset">
-              <legend className="reading-settings-label">Font</legend>
-              <div className="reading-settings-row">
-                {fonts.map(({ key, label, family }) => (
-                  <button
-                    key={key}
-                    className="reading-settings-btn reader-font-btn"
-                    style={{ fontFamily: family }}
-                    onClick={() => updateSetting('font', key)}
-                    aria-pressed={settings.font === key}
-                  >
-                    Aa<span className="reader-font-label">{label}</span>
-                  </button>
-                ))}
-              </div>
-            </fieldset>
-
-            {/* Font size */}
-            <fieldset className="reading-settings-fieldset">
-              <legend className="reading-settings-label">Text Size</legend>
-              <div className="reader-size-control">
+      <Popover.Portal>
+        <Popover.Content
+          className="reading-settings"
+          side="top"
+          align="end"
+          sideOffset={15}
+          collisionPadding={15}
+        >
+          {/* Theme */}
+          <fieldset className="reading-settings-fieldset">
+            <legend className="reading-settings-label">Theme</legend>
+            <div className="reading-settings-row">
+              {themes.map((t) => (
                 <button
-                  className="reader-size-adj"
-                  onClick={() =>
-                    updateSetting(
-                      'fontSize',
-                      Math.max(13, settings.fontSize - 1)
-                    )
-                  }
-                  disabled={settings.fontSize <= 13}
-                  aria-label="Decrease text size"
+                  key={t}
+                  className={`reading-settings-btn reader-theme-btn_${t}`}
+                  onClick={() => updateSetting('theme', t)}
+                  aria-pressed={settings.theme === t}
                 >
-                  <span className="reader-size-adj-a">A</span>
-                  <span className="reader-size-adj-sym">−</span>
+                  <span className="reader-theme-swatch" aria-hidden="true" />
+                  <span>{t.charAt(0).toUpperCase() + t.slice(1)}</span>
                 </button>
-                <div
-                  className="reader-size-dots"
-                  role="radiogroup"
-                  aria-label="Text size"
-                >
-                  {FONT_SIZE_STOPS.map((size) => (
-                    <button
-                      key={size}
-                      role="radio"
-                      className={`reader-size-dot ${Math.abs(settings.fontSize - size) < 1.5 ? ' reader-size-dot_active' : ''}`}
-                      onClick={() => updateSetting('fontSize', size)}
-                      aria-checked={Math.abs(settings.fontSize - size) < 1.5}
-                      aria-label={`Text size ${size}`}
-                    />
-                  ))}
-                </div>
+              ))}
+            </div>
+          </fieldset>
+
+          {/* Font */}
+          <fieldset className="reading-settings-fieldset">
+            <legend className="reading-settings-label">Font</legend>
+            <div className="reading-settings-row">
+              {fonts.map(({ key, label, family }) => (
                 <button
-                  className="reader-size-adj"
-                  onClick={() =>
-                    updateSetting(
-                      'fontSize',
-                      Math.min(22, settings.fontSize + 1)
-                    )
-                  }
-                  disabled={settings.fontSize >= 22}
-                  aria-label="Increase text size"
+                  key={key}
+                  className="reading-settings-btn reader-font-btn"
+                  style={{ fontFamily: family }}
+                  onClick={() => updateSetting('font', key)}
+                  aria-pressed={settings.font === key}
                 >
-                  <span className="reader-size-adj-a">A</span>
-                  <span className="reader-size-adj-sym">+</span>
+                  Aa<span className="reader-font-label">{label}</span>
                 </button>
-              </div>
-            </fieldset>
+              ))}
+            </div>
+          </fieldset>
 
-            {/* Spacing */}
-            <fieldset className="reading-settings-fieldset">
-              <legend className="reading-settings-label">Spacing</legend>
-              <div className="reading-settings-row">
-                {spacings.map((s) => (
+          {/* Font size */}
+          <fieldset className="reading-settings-fieldset">
+            <legend className="reading-settings-label">Text Size</legend>
+            <div className="reader-size-control">
+              <button
+                className="reader-size-adj"
+                onClick={() =>
+                  updateSetting('fontSize', Math.max(13, settings.fontSize - 1))
+                }
+                disabled={settings.fontSize <= 13}
+                aria-label="Decrease text size"
+              >
+                <span className="reader-size-adj-a">A</span>
+                <span className="reader-size-adj-sym">−</span>
+              </button>
+              <div
+                className="reader-size-dots"
+                role="radiogroup"
+                aria-label="Text size"
+              >
+                {FONT_SIZE_STOPS.map((size) => (
                   <button
-                    key={s}
-                    className="reading-settings-btn reader-spacing-btn"
-                    onClick={() => updateSetting('lineSpacing', s)}
-                    aria-pressed={settings.lineSpacing === s}
-                  >
-                    <span
-                      className={`reader-spacing-icon reader-spacing-icon_${s}`}
-                      aria-hidden="true"
-                    >
-                      <span />
-                      <span />
-                      <span />
-                    </span>
-                    <span>{s.charAt(0).toUpperCase() + s.slice(1)}</span>
-                  </button>
+                    key={size}
+                    role="radio"
+                    className={`reader-size-dot ${Math.abs(settings.fontSize - size) < 1.5 ? ' reader-size-dot_active' : ''}`}
+                    onClick={() => updateSetting('fontSize', size)}
+                    aria-checked={Math.abs(settings.fontSize - size) < 1.5}
+                    aria-label={`Text size ${size}`}
+                  />
                 ))}
               </div>
-            </fieldset>
+              <button
+                className="reader-size-adj"
+                onClick={() =>
+                  updateSetting('fontSize', Math.min(22, settings.fontSize + 1))
+                }
+                disabled={settings.fontSize >= 22}
+                aria-label="Increase text size"
+              >
+                <span className="reader-size-adj-a">A</span>
+                <span className="reader-size-adj-sym">+</span>
+              </button>
+            </div>
+          </fieldset>
 
-            {/* Margins */}
-            <fieldset className="reading-settings-fieldset">
-              <legend className="reading-settings-label">Margins</legend>
-              <div className="reading-settings-row">
-                {margins.map((m) => (
-                  <button
-                    key={m}
-                    className="reading-settings-btn"
-                    onClick={() => updateSetting('margin', m)}
-                    aria-pressed={settings.margin === m}
+          {/* Spacing */}
+          <fieldset className="reading-settings-fieldset">
+            <legend className="reading-settings-label">Spacing</legend>
+            <div className="reading-settings-row">
+              {spacings.map((s) => (
+                <button
+                  key={s}
+                  className="reading-settings-btn reader-spacing-btn"
+                  onClick={() => updateSetting('lineSpacing', s)}
+                  aria-pressed={settings.lineSpacing === s}
+                >
+                  <span
+                    className={`reader-spacing-icon reader-spacing-icon_${s}`}
+                    aria-hidden="true"
                   >
-                    <span
-                      className={`reader-margin-icon reader-margin-icon_${m}`}
-                      aria-hidden="true"
-                    >
-                      <span className="reader-margin-icon-inner" />
-                    </span>
-                    <span>{m.charAt(0).toUpperCase() + m.slice(1)}</span>
-                  </button>
-                ))}
-              </div>
-            </fieldset>
-          </div>
-        </>
-      )}
-    </>
+                    <span />
+                    <span />
+                    <span />
+                  </span>
+                  <span>{s.charAt(0).toUpperCase() + s.slice(1)}</span>
+                </button>
+              ))}
+            </div>
+          </fieldset>
+
+          {/* Margins */}
+          <fieldset className="reading-settings-fieldset">
+            <legend className="reading-settings-label">Margins</legend>
+            <div className="reading-settings-row">
+              {margins.map((m) => (
+                <button
+                  key={m}
+                  className="reading-settings-btn"
+                  onClick={() => updateSetting('margin', m)}
+                  aria-pressed={settings.margin === m}
+                >
+                  <span
+                    className={`reader-margin-icon reader-margin-icon_${m}`}
+                    aria-hidden="true"
+                  >
+                    <span className="reader-margin-icon-inner" />
+                  </span>
+                  <span>{m.charAt(0).toUpperCase() + m.slice(1)}</span>
+                </button>
+              ))}
+            </div>
+          </fieldset>
+        </Popover.Content>
+      </Popover.Portal>
+    </Popover.Root>
   );
 }
