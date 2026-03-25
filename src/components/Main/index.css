@@ -1,6 +1,6 @@
 .main {
   background: var(--page-bg);
   flex-grow: 1;
-  margin: 0 auto;
   transition: background 0.25s ease;
+  width: 100%;
 }

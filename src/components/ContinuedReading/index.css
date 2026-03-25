@@ -58,6 +58,6 @@
   font-style: italic;
   letter-spacing: 0.02em;
   text-align: center;
-  width: 55ch;
+  max-width: 55ch;
   margin: 0 auto;
 }

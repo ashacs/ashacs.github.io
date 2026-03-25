@@ -1,5 +1,6 @@
 .home-container {
   box-sizing: border-box;
+  margin: 0 auto;
   font-size: var(--reader-font-size);
   line-height: var(--reader-line-height);
   padding: 0 var(--reader-margin);
