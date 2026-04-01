@@ -14,15 +14,15 @@ export function Home() {
       <section>
         <SectionTitle>Authorʼs Note</SectionTitle>
         <Anecdote>
-          Building UI scratches my itch for logic, but it also brings me closer
+          Building UI satisfies my love of logic, but it also brings me closer
           to the user on the other side of the screen (thatʼs you! hello!).
-          Software touches real people. So can we use these clickity-clack
-          machines for good? I hope so.
+          Software touches real people, so can we have a positive effect on
+          them? I hope so.
         </Anecdote>
       </section>
 
       <section>
-        <SectionTitle>Experience</SectionTitle>
+        <SectionTitle>Career Chapters</SectionTitle>
         <Experience />
       </section>
 
