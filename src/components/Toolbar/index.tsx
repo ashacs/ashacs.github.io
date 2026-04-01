@@ -38,6 +38,8 @@ const MARGIN_MAP: Record<Margin, string> = {
 };
 
 const FONT_SIZE_STOPS = [13, 15, 17, 19, 21] as const;
+const FONT_SIZE_STOPS_MIN = FONT_SIZE_STOPS[0];
+const FONT_SIZE_STOPS_MAX = FONT_SIZE_STOPS[FONT_SIZE_STOPS.length - 1];
 
 const STORAGE_KEY = 'acs-reading-settings';
 
@@ -189,9 +191,9 @@ export function Toolbar() {
               <button
                 className="reader-size-adj"
                 onClick={() =>
-                  updateSetting('fontSize', Math.max(13, settings.fontSize - 1))
+                  updateSetting('fontSize', Math.max(FONT_SIZE_STOPS_MIN, settings.fontSize - 1))
                 }
-                disabled={settings.fontSize <= 13}
+                disabled={settings.fontSize <= FONT_SIZE_STOPS_MIN}
                 aria-label="Decrease text size"
               >
                 <span className="reader-size-adj-a">A</span>
@@ -202,23 +204,29 @@ export function Toolbar() {
                 role="radiogroup"
                 aria-label="Text size"
               >
-                {FONT_SIZE_STOPS.map((size) => (
-                  <button
-                    key={size}
-                    role="radio"
-                    className={`reader-size-dot ${Math.abs(settings.fontSize - size) < 1.5 ? ' reader-size-dot_active' : ''}`}
-                    onClick={() => updateSetting('fontSize', size)}
-                    aria-checked={Math.abs(settings.fontSize - size) < 1.5}
-                    aria-label={`Text size ${size}`}
-                  />
-                ))}
+                {FONT_SIZE_STOPS.map((size) => {
+                  // fontSize can be any integer (stepped by ±1), not just a stop value.
+                  // A dot is active if the current size is within 1px of its stop,
+                  // which can result in multiple dots appearing active simultaneously.
+                  const isActive = Math.abs(settings.fontSize - size) < 1.5;
+                  return (
+                    <button
+                      key={size}
+                      role="radio"
+                      className={`reader-size-dot ${isActive ? ' reader-size-dot_active' : ''}`}
+                      onClick={() => updateSetting('fontSize', size)}
+                      aria-checked={isActive}
+                      aria-label={`Text size ${size}`}
+                    />
+                  );
+                })}
               </div>
               <button
                 className="reader-size-adj"
                 onClick={() =>
-                  updateSetting('fontSize', Math.min(22, settings.fontSize + 1))
+                  updateSetting('fontSize', Math.min(FONT_SIZE_STOPS_MAX, settings.fontSize + 1))
                 }
-                disabled={settings.fontSize >= 22}
+                disabled={settings.fontSize >= FONT_SIZE_STOPS_MAX}
                 aria-label="Increase text size"
               >
                 <span className="reader-size-adj-a">A</span>
