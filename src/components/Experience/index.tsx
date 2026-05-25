@@ -11,37 +11,35 @@ export function Experience() {
           ReadMe — Frontend Engineer
         </ExperienceSectionTitle>
         <ExperienceSectionSubtitle>
-          Oct 2024 – Present
+          Oct 2024 – May 2026
         </ExperienceSectionSubtitle>
         <List>
           <ListItem>
-            Rebuilt the documentation versioning experience during a
-            foundational redesign of the product, with careful attention to{' '}
-            <Mark>accessibility</Mark>, click target UX, and reusable redirect
-            logic.
+            Rebuilt the productʼs documentation versioning experience during a
+            foundational redesign, with careful attention to{' '}
+            <Mark>accessibility</Mark>, click target UX, and reusablity
           </ListItem>
           <ListItem>
-            Led <Mark>full-stack</Mark> implementation a new feature to enhance
-            the versioning system with git-backed branches to stage and
-            collaborate on documentation changes. This involved surfacing
-            foundational API and routing unknowns, supporting a proof-of-concept
-            approach, and implementing a complex <Mark>virtual tree</Mark>.
+            Led implementation of a new feature to expand the versioning
+            experience with branches where users could stage and collaborate on
+            changes, involving surfacing foundational API and routing unknowns
+            plus supporting a proof-of-concept approach
           </ListItem>
           <ListItem>
             Helped other engineers avoid common pitfalls and security
             vulnerabilities by creating <Mark>lint rules</Mark> to prevent
-            recurrence.
+            recurrence
           </ListItem>
           <ListItem>
             Improved <Mark>TypeScript</Mark> coverage and component quality
             across the codebase through conversions, refactors, and
             consolidations, introducing patterns recognized and adopted by
-            teammates.
+            teammates
           </ListItem>
           <ListItem>
             Wrote a <Mark>codemod</Mark> for a migration from Styleguidist to
-            <Mark>Storybook</Mark> and drove the RFC to get team buy-in. This
-            enabled faster component driven development for frontend engineers.
+            <Mark>Storybook</Mark> and drove the RFC to get team buy-in,
+            enabling faster component driven development for frontend engineers
           </ListItem>
         </List>
       </section>
